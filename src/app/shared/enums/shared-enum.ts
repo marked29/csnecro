@@ -1,3 +1,3 @@
 export enum SharedEnum {
-    VAL = 'VAL',
+  VAL = 'VAL',
 }

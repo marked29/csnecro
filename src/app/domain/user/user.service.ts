@@ -1,31 +1,34 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { Pageable, Pagination } from '../../shared/types/pagination';
-import { User } from './user.entity';
+import type { Pagination } from '../../shared/types/pagination';
+import type { User } from './user.entity';
 
-export const counterApi = createApi({
+export const UserService = createApi({
   reducerPath: 'users',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'users/'
+    baseUrl: 'users/',
   }),
   tagTypes: ['User'],
   endpoints: (build) => ({
-    getUsers: build.query<User[], Pageable>({
+    getUsers: build.query<User[], Pagination>({
       query: (pagination: Pagination) => ({
-        url: ``,
+        url: '',
         method: 'GET',
         params: pagination,
       }),
       providesTags: (result) =>
         result
           ? [
-              ...result.map(({ id }) => ({ type: 'User' as const, id })),
+              ...result.map(({ id }) => ({
+                type: 'User' as const,
+                id,
+              })),
               { type: 'User', id: 'LIST' },
             ]
           : [{ type: 'User', id: 'LIST' }],
     }),
     addUser: build.mutation<User, Partial<User>>({
       query: (body) => ({
-        url: ``,
+        url: '',
         method: 'POST',
         body,
       }),
@@ -48,11 +51,17 @@ export const counterApi = createApi({
         return {
           url: `/${id}`,
           method: 'DELETE',
-        }
+        };
       },
       invalidatesTags: (_result, _error, id) => [{ type: 'User', id }],
-    })
-  })
+    }),
+  }),
 });
 
-export const { useGetUsersQuery, useGetUserQuery, useAddUserMutation, useDeleteUserMutation, useUpdateUserMutation } = counterApi;
+export const {
+  useGetUsersQuery,
+  useGetUserQuery,
+  useAddUserMutation,
+  useDeleteUserMutation,
+  useUpdateUserMutation,
+} = UserService;
