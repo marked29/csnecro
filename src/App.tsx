@@ -1,53 +1,52 @@
 import { FC } from 'react';
-import logo from './logo.svg';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import { Route, BrowserRouter } from 'react-router-dom';
+import { Routes } from './app/shared/constants/Routes';
+import useStyles from './App.styles';
+import { Header } from './features/header/Header';
 
-import './App.css';
+export const App: FC = () => {
+  const classes = useStyles();
 
-export const App: FC = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-      <span>
-        <span>Learn </span>
-        <a
-          className="App-link"
-          href="https://reactjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          React
-        </a>
-        <span>, </span>
-        <a
-          className="App-link"
-          href="https://redux.js.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Redux
-        </a>
-        <span>, </span>
-        <a
-          className="App-link"
-          href="https://redux-toolkit.js.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Redux Toolkit
-        </a>
-        ,<span> and </span>
-        <a
-          className="App-link"
-          href="https://react-redux.js.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          React Redux
-        </a>
-      </span>
-    </header>
-  </div>
-);
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <div className={classes.root}>
+          <Grid container spacing={1}>
+            <Grid item container direction="column" spacing={1} xs={3}>
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>Chat</Paper>
+              </Grid>
+            </Grid>
+
+            <Grid item container xs={9}>
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>
+                  <Header />
+                </Paper>
+              </Grid>
+
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>
+                  <Route
+                    path={Routes.JACKPOT}
+                    component={() => <div>Jackpot</div>}
+                  />
+                  <Route path={Routes.FAQ} component={() => <div>Faq</div>} />
+                  <Route
+                    path={Routes.COINFLIP}
+                    component={() => <div>Coinflip</div>}
+                  />
+                </Paper>
+              </Grid>
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>Footer</Paper>
+              </Grid>
+            </Grid>
+          </Grid>
+        </div>
+      </div>
+    </BrowserRouter>
+  );
+};
