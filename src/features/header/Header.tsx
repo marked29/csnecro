@@ -1,37 +1,10 @@
-// import { Button } from '@material-ui/core';
-// import { FC } from 'react';
-// import { Link } from 'react-router-dom';
-// import styles from './Header';
-
-// export const Header: FC = () => {
-//   const style = styles();
-
-//   return (
-//     <div className={style.header}>
-//       <div className={style.leftHead}>
-//         <Link to="/coinflip"> coinflip </Link>
-//         <Link to="/jackpot"> jackpot </Link>
-//       </div>
-//       <div className={style.rightHead}>
-//         <Link to="/fairness"> fairness </Link>
-//         <Link to="/support"> support </Link>
-//         <Link to="/faq"> faq </Link>
-//         <Link to="/terms"> terms </Link>
-//         <Button> ENG </Button>
-//         <Button> Sound </Button>
-//         <Button> LOGIN </Button>
-//       </div>
-//     </div>
-//   );
-// };
-
 import { FC } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,16 +25,38 @@ const Header: FC = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
+          <Button
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
           >
-            But
-          </IconButton>
+            <Link to="/coinflip"> coinflip </Link>
+          </Button>
+          <Button
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+          >
+            <Link to="/jackpot"> jackpot </Link>
+          </Button>
+
           <Typography variant="h6" className={classes.title}>
-            News
+            <Link to="/fairness"> fairness </Link>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <Link to="/support"> support </Link>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <Link to="/faq"> faq </Link>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <Link to="/terms"> terms </Link>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            ENG
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            Sound
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
