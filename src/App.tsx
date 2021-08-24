@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import { Route, BrowserRouter } from 'react-router-dom';
-import { Header } from './features/header/Header';
+import Header from './features/header/Header';
 import './App.css';
 
 const useStyles = makeStyles((theme) => ({
