@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -12,9 +13,11 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-redux": "^7.1.7",
+    "@types/react-router": "^5.1.16",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "typescript": "~4.1.5"
   },
@@ -26,7 +29,7 @@
     "lint": "npx eslint \"**/*.{ts,tsx}\"",
     "pretty": "npx prettier --write src",
     "prepare": "husky install",
-    "test:noWatch":"yarn test -- --watchAll=false"
+    "test:noWatch": "yarn test -- --watchAll=false"
   },
   "browserslist": {
     "production": [
@@ -41,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.8",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
     "eslint": "^7.32.0",
@@ -51,7 +55,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "2.3.2",
-    "husky": "^7.0.0"
+    "husky": "^7.0.0",
+    "prettier": "2.3.2"
   }
 }
