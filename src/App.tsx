@@ -3,11 +3,11 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { Routes } from './app/shared/constants/Routes';
-import styles from './App.styles';
+import useStyles from './App.styles';
 import { Header } from './features/header/Header';
 
 export const App: FC = () => {
-  const classes = styles();
+  const classes = useStyles();
 
   return (
     <BrowserRouter>
