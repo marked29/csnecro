@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { Header } from './features/header/Header';
+import { Routes } from './app/shared/constants/Routes';
 import './App.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -37,9 +38,15 @@ export const App: FC = () => {
             </Grid>
             <Grid item xs={9}>
               <Paper className={classes.paper}>
-                <Route path="/jackpot" component={() => <div>Jackpot</div>} />
-                <Route path="/faq" component={() => <div>Faq</div>} />
-                <Route path="/coinflip" component={() => <div>Coinflip</div>} />
+                <Route
+                  path={Routes.JACKPOT}
+                  component={() => <div>Jackpot</div>}
+                />
+                <Route path={Routes.FAQ} component={() => <div>Faq</div>} />
+                <Route
+                  path={Routes.COINFLIP}
+                  component={() => <div>Coinflip</div>}
+                />
               </Paper>
             </Grid>
             <Grid item xs={12}>
