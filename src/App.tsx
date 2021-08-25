@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { Routes } from './app/shared/constants/Routes';
 import useStyles from './App.styles';
-import { Header } from './features/header/Header';
+import Header from './features/header/Header';
 
 export const App: FC = () => {
   const classes = useStyles();
