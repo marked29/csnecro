@@ -2,11 +2,12 @@ import { FC } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { Route, BrowserRouter } from 'react-router-dom';
-import styles from './App.styles';
+import { Routes } from './app/shared/constants/Routes';
+import useStyles from './App.styles';
 import Header from './features/header/Header';
 
 export const App: FC = () => {
-  const classes = styles();
+  const classes = useStyles();
 
   return (
     <BrowserRouter>
@@ -28,10 +29,13 @@ export const App: FC = () => {
 
               <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                  <Route path="/jackpot" component={() => <div>Jackpot</div>} />
-                  <Route path="/faq" component={() => <div>Faq</div>} />
                   <Route
-                    path="/coinflip"
+                    path={Routes.JACKPOT}
+                    component={() => <div>Jackpot</div>}
+                  />
+                  <Route path={Routes.FAQ} component={() => <div>Faq</div>} />
+                  <Route
+                    path={Routes.COINFLIP}
                     component={() => <div>Coinflip</div>}
                   />
                 </Paper>

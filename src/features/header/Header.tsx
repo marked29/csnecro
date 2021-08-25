@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
+import { Routes } from '../../app/shared/constants/Routes';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,27 +31,27 @@ const Header: FC = () => {
             color="inherit"
             aria-label="menu"
           >
-            <Link to="/coinflip"> coinflip </Link>
+            <Link to={Routes.COINFLIP}> coinflip </Link>
           </Button>
           <Button
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
           >
-            <Link to="/jackpot"> jackpot </Link>
+            <Link to={Routes.JACKPOT}> jackpot </Link>
           </Button>
 
           <Typography variant="h6" className={classes.title}>
-            <Link to="/fairness"> fairness </Link>
+            <Link to={Routes.FAIRNESS}> fairness </Link>
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            <Link to="/support"> support </Link>
+            <Link to={Routes.SUPPORT}> support </Link>
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            <Link to="/faq"> faq </Link>
+            <Link to={Routes.FAQ}> faq </Link>
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            <Link to="/terms"> terms </Link>
+            <Link to={Routes.TERMS}> terms </Link>
           </Typography>
           <Typography variant="h6" className={classes.title}>
             ENG
