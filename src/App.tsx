@@ -5,6 +5,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import { Routes } from './app/shared/constants/Routes';
 import useStyles from './App.styles';
 import Header from './features/header/Header';
+import Footer from './features/footer/Footer';
 
 export const App: FC = () => {
   const classes = useStyles();
@@ -41,7 +42,9 @@ export const App: FC = () => {
                 </Paper>
               </Grid>
               <Grid item xs={12}>
-                <Paper className={classes.paper}>Footer</Paper>
+                <Paper className={classes.paper}>
+                  <Footer />
+                </Paper>
               </Grid>
             </Grid>
           </Grid>
