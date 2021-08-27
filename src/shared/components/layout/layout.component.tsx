@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import style from './layout.module.sass';
+import Footer from '../../../features/footer/Footer';
 
 const Layout: FC = () => {
   return (
@@ -9,7 +10,9 @@ const Layout: FC = () => {
       <div className={style.wrapper}>
         <div className={style.header}>Header</div>
         <div className={style.main}>Main</div>
-        <div className={style.footer}>Footer</div>
+        <div className={style.footer}>
+          <Footer />
+        </div>
       </div>
     </div>
   );
