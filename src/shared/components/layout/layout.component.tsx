@@ -10,9 +10,7 @@ const Layout: FC = () => {
       <div className={style.wrapper}>
         <div className={style.header}>Header</div>
         <div className={style.main}>Main</div>
-        <div className={style.footer}>
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </div>
   );
