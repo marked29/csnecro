@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import cx from 'classnames';
+import cn from 'classnames';
 
 import style from './wrapper.module.sass';
 
@@ -13,9 +13,9 @@ const Wrapper: FC<WrapperProps> = ({
   className,
   children,
 }) => {
-  const compoundClassName = cx(
+  const compoundClassName = cn(
     style.root,
-    biggerPadding ? style.big_padding : '',
+    biggerPadding ? style.big_padding : biggerPadding,
     className
   );
   return <div className={compoundClassName}>{children}</div>;
