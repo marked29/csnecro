@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   paper: {
-    padding: theme.spacing(1),
+    padding: '0',
     color: theme.palette.text.secondary,
     height: '100%',
   },
