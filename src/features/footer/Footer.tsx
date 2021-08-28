@@ -10,7 +10,7 @@ const Footer: FC = () => {
       <div className={style.footer}>
         <div className={style.content}>
           <div>
-            <small className={style.rights}>
+            <small className={style.copyRights}>
               Copyright &copy; 2019 - 2020 proplayer.com. All rights reserved.
             </small>
           </div>
