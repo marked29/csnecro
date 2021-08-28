@@ -5,16 +5,26 @@ import Facebook from '../../shared/svg/facebook';
 import Instagram from '../../shared/svg/instagram';
 import Twitter from '../../shared/svg/twitter';
 
+import style from './footer.module.sass';
+
 const Footer: FC = () => {
   return (
-    <footer>
-      <Wrapper>
-        <p>Copyright © 2019 - 2020 proplayer.com. All rights reserved.</p>
-        <div>
+    <footer className={style.root}>
+      <Wrapper className={style.wrapper}>
+        <p className={style.copyright}>
+          Copyright &copy; 2019 - 2020 proplayer.com. All rights reserved.
+        </p>
+        <div className={style.socials}>
           Our socials:
-          <Facebook />
-          <Twitter />
-          <Instagram />
+          <Link href="#">
+            <Facebook />
+          </Link>
+          <Link>
+            <Twitter />
+          </Link>
+          <Link>
+            <Instagram />
+          </Link>
         </div>
       </Wrapper>
     </footer>

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import style from './layout.module.sass';
-import Footer from '../../../features/footer/Footer';
+import Footer from '../../../features/footer/footer';
 
 const Layout: FC = () => {
   return (
