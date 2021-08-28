@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Button from '../button/button.component';
 
 import style from './layout.module.sass';
-import Footer from '../../../features/footer/footer';
+import Footer from '../../../features/footer/Footer';
 
 const Layout: FC = () => {
   return (
