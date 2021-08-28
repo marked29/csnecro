@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import Wrapper from '../../shared/components/wrapper/wrapper.component';
+import Link from '../../shared/components/link/link.component';
 import Facebook from '../../shared/svg/facebook';
 import Instagram from '../../shared/svg/instagram';
 import Twitter from '../../shared/svg/twitter';
@@ -16,13 +17,13 @@ const Footer: FC = () => {
         </p>
         <div className={style.socials}>
           Our socials:
-          <Link href="#">
+          <Link href="/">
             <Facebook />
           </Link>
-          <Link>
+          <Link href="/">
             <Twitter />
           </Link>
-          <Link>
+          <Link href="/">
             <Instagram />
           </Link>
         </div>
