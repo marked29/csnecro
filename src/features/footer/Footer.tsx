@@ -1,27 +1,22 @@
 import { FC } from 'react';
-import style from './Footer.module.sass';
-import facebook from '../../public/images/facebook.png';
-import instagram from '../../public/images/instagram.png';
-import twitter from '../../public/images/twitter.png';
+
+import Wrapper from '../../shared/components/wrapper/wrapper.component';
+import Facebook from '../../shared/svg/facebook';
+import Instagram from '../../shared/svg/instagram';
+import Twitter from '../../shared/svg/twitter';
 
 const Footer: FC = () => {
   return (
     <footer>
-      <div className={style.footer}>
-        <div className={style.content}>
-          <div>
-            <small className={style.copyRights}>
-              Copyright &copy; 2019 - 2020 proplayer.com. All rights reserved.
-            </small>
-          </div>
-          <div className={style.links}>
-            <p>Our socials:</p>
-            <img src={facebook} alt="" className={style.socialLogo} />
-            <img src={instagram} alt="" className={style.socialLogo} />
-            <img src={twitter} alt="" className={style.socialLogo} />
-          </div>
+      <Wrapper>
+        <p>Copyright © 2019 - 2020 proplayer.com. All rights reserved.</p>
+        <div>
+          Our socials:
+          <Facebook />
+          <Twitter />
+          <Instagram />
         </div>
-      </div>
+      </Wrapper>
     </footer>
   );
 };
