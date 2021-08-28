@@ -1,8 +1,13 @@
 import { FC } from 'react';
 
-const Sound: FC = () => {
+type IconProps = {
+  className?: string;
+};
+
+const Sound: FC<IconProps> = ({ className }) => {
   return (
     <svg
+      className={className}
       width="11"
       height="16"
       viewBox="0 0 11 16"

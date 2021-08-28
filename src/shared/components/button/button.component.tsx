@@ -7,19 +7,26 @@ import cn from 'classnames';
 
 import s from './button.module.sass';
 
+const COLORS = {
+  primary: s.primary,
+  secondary: s.secondary,
+};
+
 type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';
   external?: boolean;
   className?: string;
-} & (React.HTMLProps<HTMLButtonElement> | React.HTMLProps<HTMLAnchorElement>);
+  color?: keyof typeof COLORS;
+} & React.HTMLProps<HTMLButtonElement>;
 
 const Button: React.FC<ButtonProps> = ({
   type = 'button',
   className,
   children,
+  color = 'primary',
   ...props
 }) => {
-  const compoundClassName = cn(s.root, className);
+  const compoundClassName = cn(s.root, COLORS[color], className);
 
   const content = children;
 
