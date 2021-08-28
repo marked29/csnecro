@@ -8,14 +8,13 @@ import cn from 'classnames';
 import s from './button.module.sass';
 
 type ButtonProps = {
-  type?: 'button' | 'submit' | 'reset' | undefined;
+  type?: 'button' | 'submit' | 'reset';
   external?: boolean;
   className?: string;
 } & (React.HTMLProps<HTMLButtonElement> | React.HTMLProps<HTMLAnchorElement>);
 
 const Button: React.FC<ButtonProps> = ({
   type = 'button',
-  external = false,
   className,
   children,
   ...props
@@ -23,21 +22,6 @@ const Button: React.FC<ButtonProps> = ({
   const compoundClassName = cn(s.root, className);
 
   const content = children;
-  if ('href' in props) {
-    if (external) {
-      return (
-        <a
-          target="_blank"
-          rel="noreferrer noopener"
-          className={compoundClassName}
-          {...(props as React.HTMLProps<HTMLAnchorElement>)}
-        >
-          {content}
-        </a>
-      );
-    }
-    return <a className={compoundClassName}>{content}</a>;
-  }
 
   return (
     <button
