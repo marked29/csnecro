@@ -2,7 +2,8 @@ import { FC } from 'react';
 import Button from '../button/button.component';
 
 import style from './layout.module.sass';
-import Footer from '../../../features/footer/footer';
+import Footer from '../../../features/footer/Footer';
+import Tape from '../tape/tape';
 
 const Layout: FC = () => {
   return (
@@ -13,7 +14,9 @@ const Layout: FC = () => {
           Header
           <Button>Hello</Button>
         </div>
-        <div className={style.main}>Main</div>
+        <div className={style.main}>
+          <Tape />
+        </div>
         <Footer />
       </div>
     </div>

@@ -6,7 +6,7 @@ import Facebook from '../../shared/svg/facebook';
 import Instagram from '../../shared/svg/instagram';
 import Twitter from '../../shared/svg/twitter';
 
-import style from './footer.module.sass';
+import style from './Footer.module.sass';
 
 const Footer: FC = () => {
   return (
