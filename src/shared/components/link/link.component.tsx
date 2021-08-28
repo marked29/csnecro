@@ -5,11 +5,16 @@
 import React from 'react';
 import cn from 'classnames';
 
+import {
+  Link as RouterLink,
+  LinkProps as RouterLinkProps,
+} from 'react-router-dom';
+
 import s from './link.module.sass';
 
 type LinkProps = {
   external?: boolean;
-} & React.HTMLProps<HTMLAnchorElement>;
+} & RouterLinkProps;
 
 const Link: React.FC<LinkProps> = ({
   external = false,
@@ -22,17 +27,21 @@ const Link: React.FC<LinkProps> = ({
   const content = children;
   if (external) {
     return (
-      <a
+      <RouterLink
         target="_blank"
         rel="noreferrer noopener"
         className={compoundClassName}
         {...props}
       >
         {content}
-      </a>
+      </RouterLink>
     );
   }
-  return <a className={compoundClassName}>{content}</a>;
+  return (
+    <RouterLink className={compoundClassName} {...props}>
+      {content}
+    </RouterLink>
+  );
 };
 
 export default Link;
