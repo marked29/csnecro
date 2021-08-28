@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Button from '../button/button.component';
 
 import style from './layout.module.sass';
+import Footer from '../../../features/footer/footer';
 
 const Layout: FC = () => {
   return (
@@ -13,7 +14,7 @@ const Layout: FC = () => {
           <Button>Hello</Button>
         </div>
         <div className={style.main}>Main</div>
-        <div className={style.footer}>Footer</div>
+        <Footer />
       </div>
     </div>
   );

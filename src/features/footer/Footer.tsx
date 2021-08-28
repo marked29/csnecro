@@ -1,26 +1,34 @@
 import { FC } from 'react';
-import useStyles from './Footer.styles';
-import facebook from '../../public/images/facebook.png';
-import instagram from '../../public/images/instagram.png';
-import twitter from '../../public/images/twitter.png';
+
+import Wrapper from '../../shared/components/wrapper/wrapper.component';
+import Link from '../../shared/components/link/link.component';
+import Facebook from '../../shared/svg/facebook';
+import Instagram from '../../shared/svg/instagram';
+import Twitter from '../../shared/svg/twitter';
+
+import style from './footer.module.sass';
 
 const Footer: FC = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.footer}>
-      <div className={classes.content}>
-        <div className={classes.rights}>
-          <p>Copyright © 2019 - 2020 proplayer.com. All rights reserved.</p>
+    <footer className={style.root}>
+      <Wrapper className={style.wrapper}>
+        <p className={style.copyright}>
+          Copyright &copy; 2019 - 2020 proplayer.com. All rights reserved.
+        </p>
+        <div className={style.socials}>
+          Our socials:
+          <Link href="/">
+            <Facebook />
+          </Link>
+          <Link href="/">
+            <Twitter />
+          </Link>
+          <Link href="/">
+            <Instagram />
+          </Link>
         </div>
-        <div className={classes.links}>
-          <p>Our socials:</p>
-          <img src={facebook} alt="" className={classes.img} />
-          <img src={instagram} alt="" className={classes.img} />
-          <img src={twitter} alt="" className={classes.img} />
-        </div>
-      </div>
-    </div>
+      </Wrapper>
+    </footer>
   );
 };
 
