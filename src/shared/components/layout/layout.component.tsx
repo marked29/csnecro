@@ -3,11 +3,12 @@ import Button from '../button/button.component';
 
 import style from './layout.module.sass';
 import Footer from '../../../features/footer/footer';
+import { Chat } from '../../../features/chat/chat';
 
 const Layout: FC = () => {
   return (
     <div className={style.root}>
-      <div className={style.chat}>Chat</div>
+      <Chat />
       <div className={style.wrapper}>
         <div className={style.header}>
           Header

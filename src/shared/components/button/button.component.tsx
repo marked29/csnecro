@@ -2,35 +2,33 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import React from 'react';
+import { FC, HTMLProps } from 'react';
 import cn from 'classnames';
 
-import s from './button.module.sass';
+import style from './button.module.sass';
 
-type ButtonProps = {
+export type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';
   external?: boolean;
   className?: string;
-} & (React.HTMLProps<HTMLButtonElement> | React.HTMLProps<HTMLAnchorElement>);
+} & HTMLProps<HTMLButtonElement>;
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   type = 'button',
   className,
   children,
   ...props
 }) => {
-  const compoundClassName = cn(s.root, className);
-
-  const content = children;
+  const compoundClassName = cn(style.root, className);
 
   return (
     <button
       // @ts-ignore
       type={type}
-      {...(props as React.HTMLProps<HTMLButtonElement>)}
+      {...props}
       className={compoundClassName}
     >
-      {content}
+      {children}
     </button>
   );
 };
