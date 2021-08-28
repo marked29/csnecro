@@ -9,12 +9,37 @@ import { Button, ButtonProps } from '../button';
 
 import style from './icon-button.module.sass';
 
-export type IconButtonProps = {} & Omit<ButtonProps, 'type'>;
+const COLORS = {
+  primary: style.primary,
+  transparent: style.transparent,
+  secondary: style.secondary,
+};
 
-export const IconButton: FC<IconButtonProps> = ({ className, ...props }) => {
-  const compoundClassName = cn(style.root, className);
+const SIZES = {
+  sm: style.sm,
+  md: style.md,
+  lg: style.lg,
+};
 
-  return <Button {...props} className={compoundClassName} />;
+export type IconButtonProps = {
+  size?: keyof typeof SIZES;
+  color?: keyof typeof COLORS;
+} & Omit<ButtonProps, 'type' | 'size'>;
+
+export const IconButton: FC<IconButtonProps> = ({
+  className,
+  size = 'md',
+  color = 'secondary',
+  ...props
+}) => {
+  const compoundClassName = cn(
+    style.root,
+    SIZES[size],
+    COLORS[color],
+    className
+  );
+
+  return <Button color="secondary" {...props} className={compoundClassName} />;
 };
 
 export default IconButton;

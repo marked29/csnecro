@@ -9,7 +9,14 @@ import style from './button.module.sass';
 
 const COLORS = {
   primary: style.primary,
+  transparent: style.transparent,
   secondary: style.secondary,
+};
+
+const SIZES = {
+  sm: style.sm,
+  md: style.md,
+  lg: style.lg,
 };
 
 export type ButtonProps = {
@@ -17,16 +24,23 @@ export type ButtonProps = {
   external?: boolean;
   className?: string;
   color?: keyof typeof COLORS;
-} & HTMLProps<HTMLButtonElement>;
+  size?: keyof typeof SIZES;
+} & Omit<HTMLProps<HTMLButtonElement>, 'size'>;
 
 export const Button: FC<ButtonProps> = ({
   type = 'button',
   className,
   children,
   color = 'primary',
+  size = 'md',
   ...props
 }) => {
-  const compoundClassName = cn(style.root, COLORS[color], className);
+  const compoundClassName = cn(
+    style.root,
+    SIZES[size],
+    COLORS[color],
+    className
+  );
 
   return (
     <button

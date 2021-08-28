@@ -12,8 +12,12 @@ export const ChatHeader: FC = () => {
       <IconButton>
         <ArrowLeft />
       </IconButton>
-      50 online
-      <Settings />
+      <span>
+        <strong>50</strong> online
+      </span>
+      <IconButton color="transparent">
+        <Settings />
+      </IconButton>
     </div>
   );
 };
