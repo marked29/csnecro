@@ -7,19 +7,26 @@ import cn from 'classnames';
 
 import style from './button.module.sass';
 
+const COLORS = {
+  primary: style.primary,
+  secondary: style.secondary,
+};
+
 export type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';
   external?: boolean;
   className?: string;
+  color?: keyof typeof COLORS;
 } & HTMLProps<HTMLButtonElement>;
 
 export const Button: FC<ButtonProps> = ({
   type = 'button',
   className,
   children,
+  color = 'primary',
   ...props
 }) => {
-  const compoundClassName = cn(style.root, className);
+  const compoundClassName = cn(style.root, COLORS[color], className);
 
   return (
     <button
