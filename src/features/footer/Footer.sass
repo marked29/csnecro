@@ -1,0 +1,33 @@
+@import '../../shared/styles/_variables.sass';
+
+%footerFont
+    font-family:  $font-1  
+    font-style:  normal  
+    font-weight:  bold  
+    font-size:  12px  
+    line-height:  14px  
+    color: #696969
+    
+.footer
+    
+.content
+    display:  flex  
+    justify-content:  space-between  
+    align-items:  center  
+
+.copyRights
+    @extend %footerFont
+
+.links
+    display:  flex  
+    @extend %footerFont
+    
+.socialLogo
+    padding:  0 7px  
+
+.margined
+    margin-top: 22px
+    margin-bottom: 24px
+    font-size: 1rem
+    line-height: 1.2
+    background-color:  $secondary  
