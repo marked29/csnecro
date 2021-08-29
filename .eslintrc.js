@@ -57,6 +57,7 @@ module.exports = {
       "extensions": [".tsx"]
     }],
     "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
   },
 
 };

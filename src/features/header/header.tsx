@@ -62,7 +62,7 @@ const Header: FC = () => {
               <option value="English">ENG</option>
               <option value="Russian">RUS</option>
             </select>
-            <Button color="secondary">
+            <Button color="transparent">
               <Sound className={style.icon} />
               Sound on
             </Button>
