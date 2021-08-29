@@ -4,6 +4,7 @@ import Wrapper from '../../shared/components/wrapper/wrapper.component';
 import Logo from '../../shared/svg/logo';
 import { ChatHeader } from './header';
 import { ChatItem } from './item';
+import { Messanger } from './messanger';
 
 import style from './chat.module.sass';
 
@@ -26,6 +27,7 @@ export const Chat: FC = () => {
             <ChatItem />
           </div>
         </div>
+        <Messanger />
       </Wrapper>
     </aside>
   );
