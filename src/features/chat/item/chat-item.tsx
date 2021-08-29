@@ -24,8 +24,6 @@ export const ChatItem: FC = () => {
         <IconButton size="sm" color="transparent">
           <SoundOff />
         </IconButton>
-        {/* <Cancel />
-        <SoundOff /> */}
       </div>
     </div>
   );
