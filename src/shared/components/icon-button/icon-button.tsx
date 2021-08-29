@@ -39,7 +39,7 @@ export const IconButton: FC<IconButtonProps> = ({
     className
   );
 
-  return <Button color="secondary" {...props} className={compoundClassName} />;
+  return <Button {...props} className={compoundClassName} />;
 };
 
 export default IconButton;
