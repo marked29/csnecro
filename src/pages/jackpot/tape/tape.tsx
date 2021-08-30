@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import Cash from '../../shared/svg/cash';
-import Question from '../../shared/svg/question';
+import Cash from '../../../shared/svg/cash';
+import Question from '../../../shared/svg/question';
 
 import style from './tape.module.sass';
 
