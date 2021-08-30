@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import Header from '../../../features/header/header';
 import Footer from '../../../features/footer/Footer';
+
 import { Chat } from '../../../features/chat/chat';
 
 import style from './layout.module.sass';
@@ -12,7 +13,9 @@ const Layout: FC = () => {
       <Chat />
       <div className={style.wrapper}>
         <Header />
-        <div className={style.main}>Main</div>
+        <div className={style.main}>
+          Main
+        </div>
         <Footer />
       </div>
     </div>
