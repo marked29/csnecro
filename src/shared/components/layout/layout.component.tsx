@@ -13,9 +13,7 @@ const Layout: FC = () => {
       <Chat />
       <div className={style.wrapper}>
         <Header />
-        <div className={style.main}>
-          Main
-        </div>
+        <div className={style.main}>Main</div>
         <Footer />
       </div>
     </div>
