@@ -12,7 +12,7 @@ const Jackpot: FC = () => {
       <Wrapper biggerPadding>
         <Tape />
         <div className={style.card}>
-          <Wrapper className={style.gameHeader}>
+          <Wrapper biggerPadding className={style.gameHeader}>
             <div className={style.content}>
               <span className={style.surface}>Skin limit: 10</span>
               <span className={style.surface}>Skin limit: 10</span>
@@ -25,12 +25,52 @@ const Jackpot: FC = () => {
               <span className={style.surface}>Skin limit: 10</span>
             </div>
           </Wrapper>
-          <Wrapper>
-            <div>Username percentage</div>
-            <img src="/img/avatarBig.png" alt="avatar" />
-            <Button size="sm">Show skins</Button>
+          <Wrapper biggerPadding className={style.gamer_surface}>
+            <Wrapper biggerPadding className={style.gamer}>
+              <div className={style.gamer_name}>
+                Username <br /> percentage
+              </div>
+              <div className={style.gamer_avatar}>
+                <img src="/img/avatarBig.png" alt="avatar" />
+                <br />
+                255$
+              </div>
+              <Button size="sm">Show skins</Button>
+            </Wrapper>
+            <Wrapper biggerPadding className={style.gamer}>
+              <div className={style.gamer_name}>
+                Username <br /> percentage
+              </div>
+              <div className={style.gamer_avatar}>
+                <img src="/img/avatarBig.png" alt="avatar" />
+                <br />
+                255$
+              </div>
+              <Button size="sm">Show skins</Button>
+            </Wrapper>
+            <Wrapper biggerPadding className={style.gamer}>
+              <div className={style.gamer_name}>
+                Username <br /> percentage
+              </div>
+              <div className={style.gamer_avatar}>
+                <img src="/img/avatarBig.png" alt="avatar" />
+                <br />
+                255$
+              </div>
+              <Button size="sm">Show skins</Button>
+            </Wrapper>
+            <Wrapper biggerPadding className={style.gamer}>
+              <div className={style.gamer_name}>
+                Username <br /> percentage
+              </div>
+              <div className={style.gamer_avatar}>
+                <img src="/img/avatarBig.png" alt="avatar" />
+                <br />
+                255$
+              </div>
+              <Button size="sm">Show skins</Button>
+            </Wrapper>
           </Wrapper>
-          <div>Line</div>
           <div>Betted Skins</div>
         </div>
       </Wrapper>
