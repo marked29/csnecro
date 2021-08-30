@@ -10,7 +10,7 @@ export const ChatItem: FC = () => {
   return (
     <div className={style.root}>
       <div className={style.userInfo}>
-        <img className={style.avatar} src="/img/avatar.png" alt="" />
+        <img className={style.avatar} src="/img/avatar.png" alt="avatar" />
         <span className={style.levelLabel}>27</span>
         <span className={style.userName}>Username</span>
         <span className={style.message}> Lorem ipsum ipsum</span>

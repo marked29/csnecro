@@ -4,9 +4,9 @@ import Header from '../../../features/header/header';
 import Footer from '../../../features/footer/Footer';
 
 import { Chat } from '../../../features/chat/chat';
+import Jackpot from '../../../pages/jackpot.component';
 
 import style from './layout.module.sass';
-import Tape from '../tape/tape';
 
 const Layout: FC = () => {
   return (
@@ -14,9 +14,7 @@ const Layout: FC = () => {
       <Chat />
       <div className={style.wrapper}>
         <Header />
-        <div className={style.main}>
-          <Tape />
-        </div>
+        <Jackpot />
         <Footer />
       </div>
     </div>
