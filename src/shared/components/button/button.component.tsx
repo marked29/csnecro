@@ -2,35 +2,54 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import React from 'react';
+import { FC, HTMLProps } from 'react';
 import cn from 'classnames';
 
-import s from './button.module.sass';
+import style from './button.module.sass';
 
-type ButtonProps = {
+const COLORS = {
+  primary: style.primary,
+  transparent: style.transparent,
+  secondary: style.secondary,
+};
+
+const SIZES = {
+  sm: style.sm,
+  md: style.md,
+  lg: style.lg,
+};
+
+export type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';
   external?: boolean;
   className?: string;
-} & (React.HTMLProps<HTMLButtonElement> | React.HTMLProps<HTMLAnchorElement>);
+  color?: keyof typeof COLORS;
+  size?: keyof typeof SIZES;
+} & Omit<HTMLProps<HTMLButtonElement>, 'size'>;
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   type = 'button',
   className,
   children,
+  color = 'primary',
+  size = 'md',
   ...props
 }) => {
-  const compoundClassName = cn(s.root, className);
-
-  const content = children;
+  const compoundClassName = cn(
+    style.root,
+    SIZES[size],
+    COLORS[color],
+    className
+  );
 
   return (
     <button
       // @ts-ignore
       type={type}
-      {...(props as React.HTMLProps<HTMLButtonElement>)}
+      {...props}
       className={compoundClassName}
     >
-      {content}
+      {children}
     </button>
   );
 };
