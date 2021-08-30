@@ -56,18 +56,16 @@ const Header: FC = () => {
               </li>
             </ul>
           </nav>
-          <div className={style.settings}>
-            <English className={style.icon} />
-            <select name="language">
-              <option value="English">ENG</option>
-              <option value="Russian">RUS</option>
-            </select>
-            <Button color="transparent">
-              <Sound className={style.icon} />
-              Sound on
-            </Button>
-            <Button>Login</Button>
-          </div>
+          <English className={style.flag} />
+          <select className="language" name="language">
+            <option value="English">ENG</option>
+            <option value="Russian">RUS</option>
+          </select>
+          <Button color="transparent">
+            <Sound className={style.icon} />
+            Sound on
+          </Button>
+          <Button>Login</Button>
         </div>
       </Wrapper>
     </header>

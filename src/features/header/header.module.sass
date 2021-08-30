@@ -2,14 +2,17 @@
 
 .root
     background-color: $secondary
+    height: 64px
+    display: flex
+    align-items: center
+    padding: 15px 0px
 
 .wrapper
+    width: 100%
     display: flex
     align-items: center
     justify-content: space-between
     color: #696969
-    margin-top: 21px
-    margin-bottom: 22px
 
 .tools
     display: flex
@@ -23,15 +26,20 @@
             &:last-child
                 margin-right: 50px
 
+.language
+    max-height: 30px
+
+.flag
+    margin-right: 5px
+
 .icon
     position: relative
     left: -5px
     top: 3px
 
 .active
-    padding-bottom: 33px
     border-bottom: 2px solid $accent
 
 .tab
     text-transform: uppercase
-    padding: 33px 15px
+    padding: 21px 30px

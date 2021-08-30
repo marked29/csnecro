@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import Header from '../../../features/header/header';
-import Footer from '../../../features/footer/footer';
+import Footer from '../../../features/footer/Footer';
 import { Chat } from '../../../features/chat/chat';
 
 import style from './layout.module.sass';
