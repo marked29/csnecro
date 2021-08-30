@@ -6,6 +6,7 @@ import Footer from '../../../features/footer/Footer';
 import { Chat } from '../../../features/chat/chat';
 
 import style from './layout.module.sass';
+import Tape from '../tape/tape';
 
 const Layout: FC = () => {
   return (
@@ -13,7 +14,9 @@ const Layout: FC = () => {
       <Chat />
       <div className={style.wrapper}>
         <Header />
-        <div className={style.main}>Main</div>
+        <div className={style.main}>
+          <Tape />
+        </div>
         <Footer />
       </div>
     </div>
