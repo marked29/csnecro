@@ -71,7 +71,51 @@ const Jackpot: FC = () => {
               <Button size="sm">Show skins</Button>
             </Wrapper>
           </Wrapper>
-          <div>Betted Skins</div>
+          <Wrapper biggerPadding className={style.betted_skins}>
+            <div className={style.bet}>
+              <div className={style.what}>
+                betted <br /> skins
+              </div>
+              <div className={style.skins}>
+                <div className={style.skin}>
+                  <img src="/img/avatarBig.png" alt="avatar" />
+                  <br />
+                  255$
+                </div>
+                <div className={style.skin}>
+                  <img src="/img/avatarBig.png" alt="avatar" />
+                  <br />
+                  255$
+                </div>
+                <div className={style.skin}>
+                  <img src="/img/avatarBig.png" alt="avatar" />
+                  <br />
+                  255$
+                </div>
+                <div className={style.skin}>
+                  <img src="/img/avatarBig.png" alt="avatar" />
+                  <br />
+                  255$
+                </div>
+                <div className={style.skin}>
+                  <img src="/img/avatarBig.png" alt="avatar" />
+                  <br />
+                  255$
+                </div>
+                <div className={style.skin}>
+                  <img src="/img/avatarBig.png" alt="avatar" />
+                  <br />
+                  255$
+                </div>
+                <div className={style.skin}>
+                  <img src="/img/avatarBig.png" alt="avatar" />
+                  <br />
+                  255$
+                </div>
+              </div>
+              <Button size="lg">Show skins</Button>
+            </div>
+          </Wrapper>
         </div>
       </Wrapper>
     </div>
