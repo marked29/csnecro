@@ -1,8 +1,13 @@
 import { FC } from 'react';
 
-const Question: FC = () => {
+type IconProps = {
+  className?: string;
+};
+
+const Question: FC<IconProps> = ({ className }) => {
   return (
     <svg
+      className={className}
       width="20"
       height="20"
       viewBox="0 0 20 20"

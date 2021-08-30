@@ -1,8 +1,13 @@
 import { FC } from 'react';
 
-const Cash: FC = () => {
+type IconProps = {
+  className?: string;
+};
+
+const Cash: FC<IconProps> = ({ className }) => {
   return (
     <svg
+      className={className}
       width="24"
       height="24"
       viewBox="0 0 24 24"

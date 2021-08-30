@@ -12,16 +12,12 @@ const Tape: FC = () => {
       <Wrapper>
         <div className={style.tapeLeft} />
         <div className={style.tapeCenter}>
-          <div className={style.icon}>
-            <Cash />
-          </div>
+          <Cash className={style.icon} />
           <p className={style.promo}>
             The player who made the first bet, revives a bonus of 4% in case of
             winning
           </p>
-          <div className={style.icon}>
-            <Question />
-          </div>
+          <Question className={style.icon} />
         </div>
         <div className={style.tapeRight} />
       </Wrapper>
