@@ -1,22 +1,47 @@
+@import "../../../../shared/styles/_variables"
+
 .betted_skins
     margin-top: 30px
     padding-bottom: 35px
 
 .what
     padding: 22px 18px
-    background-color: #18222e
+    background-color: $secondary-1
+    text-transform: uppercase
+    font-weight: 900
+    color: $accent
+    font-size: 0.75rem
+    line-height: 1.16rems
+    & span > p
+        color: white 
+        font-size: 0.964rem
+        line-height: 1.2rem
 
 .bet
     display: flex
     align-items: center
     justify-content: space-between
     padding-right: 20px
+    background-color: $primary
 
 .skins
     display: flex
 
 .skin
-    background-color: #121212
+    background-color: $secondary-2
     text-align: center
     margin-right: 3px
-    border: 1px solid tomato
+    border-radius: 3px
+    
+    &>img
+        border: 1px solid tomato
+        border-top-left-radius: 3px
+        border-top-right-radius: 3px
+
+.deposit
+        font-size: 0.7rem
+        line-height: 0.8rem
+        font-weight: 900
+        margin: 2px auto 3px
+
+
