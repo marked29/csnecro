@@ -18,7 +18,7 @@ const Skins: FC<SkinsProps> = () => {
         </div>
         <div className={style.skins}>
           {skinsList.map((skin) => (
-            <div className={style.skin}>
+            <div className={style.skin} key={skin}>
               <img src="/img/avatarBig.png" alt="avatar" />
               <br />
               {skin}

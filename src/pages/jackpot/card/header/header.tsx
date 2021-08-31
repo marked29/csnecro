@@ -14,13 +14,17 @@ const Header: FC<HeaderProps> = ({ gameId = '# 3445' }) => {
     <Wrapper biggerPadding className={style.gameHeader}>
       <div className={style.content}>
         {headerTitlesLeft.map((title) => (
-          <span className={style.surface}>{title} 10</span>
+          <span className={style.surface} key={title}>
+            {title} 10
+          </span>
         ))}
       </div>
       <h3 className={style.content}>GAME {gameId}</h3>
       <div className={style.content}>
         {headerTitlesRight.map((title) => (
-          <span className={style.surface}>{title} 10</span>
+          <span className={style.surface} key={title}>
+            {title} 10
+          </span>
         ))}
       </div>
     </Wrapper>
