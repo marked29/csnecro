@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import Wrapper from '../../../../shared/components/wrapper/wrapper.component';
 import Button from '../../../../shared/components/button/button.component';
+
 import style from './skins.module.sass';
 
 const skinsList = ['255$', '200$', '50$', '29$', '220$', '210$', '90$'];

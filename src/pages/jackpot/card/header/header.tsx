@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import Wrapper from '../../../../shared/components/wrapper/wrapper.component';
+
 import style from './header.module.sass';
 
 type HeaderProps = {

@@ -2,7 +2,8 @@ import { FC } from 'react';
 
 import Wrapper from '../../../../shared/components/wrapper/wrapper.component';
 import Button from '../../../../shared/components/button/button.component';
-import style from './gamer.module.sass';
+
+import style from './gamers.module.sass';
 
 const userList = ['User 1', 'User 2', 'User 3', 'User 4'];
 type GamerProps = {
@@ -12,7 +13,7 @@ type GamerProps = {
   lvl?: number;
 };
 
-const Gamer: FC<GamerProps> = () => {
+const Gamers: FC<GamerProps> = () => {
   return (
     <Wrapper biggerPadding className={style.gamer_surface}>
       {userList.map((user) => (
@@ -34,4 +35,4 @@ const Gamer: FC<GamerProps> = () => {
     </Wrapper>
   );
 };
-export default Gamer;
+export default Gamers;

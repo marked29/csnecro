@@ -2,9 +2,9 @@ import { FC } from 'react';
 
 import Wrapper from '../../shared/components/wrapper/wrapper.component';
 import Tape from './tape/tape';
+import Card from './card/card';
 
 import style from './jackpot.module.sass';
-import Card from './card/card';
 
 const Jackpot: FC = () => {
   return (
