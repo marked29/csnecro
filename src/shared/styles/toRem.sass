@@ -1,0 +1,7 @@
+@import './configs'
+
+@function stripUnit($num)
+  @return $num / ($num * 0 + 1)
+
+@function rem($px)
+  @return ($px / $baseHtmlFs) * 1rem
