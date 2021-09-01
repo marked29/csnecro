@@ -1,3 +1,5 @@
+@import '../../styles/_variables'
+@import '../../styles/fontUtils'
 
 .root
     display: flex
@@ -13,8 +15,7 @@
     position: relative
 
     .promo
-        font-size: 1.25rem
-        line-height: 1.2
+        @include fontDimensions(24px, 20px)
         margin: 11px 0
 
     .icon

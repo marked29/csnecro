@@ -1,3 +1,6 @@
+@import '../../styles/_variables'
+@import '../../styles/fontUtils'
+
 .root
     position: relative
     box-sizing: border-box // Prevent padding issue with fullWidth.
@@ -10,6 +13,7 @@
     border-radius: 5px
 
 .input
+    @include fontDimensions(14px, 12px)
     padding: 16px 10px 16px 20px
     border: 0
     box-sizing: content-box
