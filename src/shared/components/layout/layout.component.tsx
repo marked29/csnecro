@@ -1,19 +1,22 @@
 import { FC } from 'react';
-import Button from '../button/button.component';
+
+import Header from '../../../features/header/header';
+import Footer from '../../../features/footer/Footer';
+
+import { Chat } from '../../../features/chat/chat';
 
 import style from './layout.module.sass';
-import Footer from '../../../features/footer/Footer';
+import Tape from '../tape/tape';
 
 const Layout: FC = () => {
   return (
     <div className={style.root}>
-      <div className={style.chat}>Chat</div>
+      <Chat />
       <div className={style.wrapper}>
-        <div className={style.header}>
-          Header
-          <Button>Hello</Button>
+        <Header />
+        <div className={style.main}>
+          <Tape />
         </div>
-        <div className={style.main}>Main</div>
         <Footer />
       </div>
     </div>
