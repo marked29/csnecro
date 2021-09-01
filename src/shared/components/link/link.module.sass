@@ -1,8 +1,8 @@
 @import '../../styles/_variables'
+@import '../../styles/fontUtils'
 
 .root
-    font-size: $fs-14
-    line-height: $lh-17
+    @include fontDimensions(17px, 20px)
     font-weight: $bold
     text-align: center
     border-radius: 8px

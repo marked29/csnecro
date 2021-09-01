@@ -1,10 +1,10 @@
 @import '../../shared/styles/_variables'
+@import '../../shared/styles/fontUtils'
 
 .root
   background-color: $secondary
-  font-size: $fs-14
+  @include fontDimensions(17px, 14px)
   color: white
-  line-height: $lh-17
 
 .wrapper
   display: flex
