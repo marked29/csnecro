@@ -15,7 +15,7 @@ const Header: FC<HeaderProps> = ({ gameId = '# 3445' }) => {
       <div className={style.content}>
         {headerTitlesLeft.map((title) => (
           <span className={style.surface} key={title}>
-            {title} <p>$10</p>
+            {title} <span>$10 </span>
           </span>
         ))}
       </div>
@@ -23,7 +23,7 @@ const Header: FC<HeaderProps> = ({ gameId = '# 3445' }) => {
       <div className={style.content}>
         {headerTitlesRight.map((title) => (
           <span className={style.surface} key={title}>
-            {title} <p>$10</p>
+            {title} <span>$10</span>
           </span>
         ))}
       </div>
