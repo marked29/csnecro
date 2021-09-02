@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import Wrapper from '../../shared/components/wrapper/wrapper.component';
-import Link from '../../shared/components/link/link.component';
+import Link from '../../shared/components/link/link';
 import Facebook from '../../shared/svg/facebook';
 import Instagram from '../../shared/svg/instagram';
 import Twitter from '../../shared/svg/twitter';
