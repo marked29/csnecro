@@ -1,21 +1,21 @@
 @import "../../../../shared/styles/_variables"
+@import "../../../../shared/styles/fontUtils"
 
 .betted_skins
     margin-top: 30px
     padding-bottom: 35px
 
 .what
+    @include fontDimensions(14.4px, 12px)
     padding: 22px 18px
-    background-color: $secondary-1
+    background-color: $bgColor-6
     text-transform: uppercase
     font-weight: 900
     color: $accent
-    font-size: 0.75rem
-    line-height: 1.16rems
+
     & span > p
         color: white 
-        font-size: 0.964rem
-        line-height: 1.2rem
+        @include fontDimensions(18.51px, 15.43px)
 
 .bet
     display: flex
@@ -28,7 +28,7 @@
     display: flex
 
 .skin
-    background-color: $secondary-2
+    background-color: $bgColor-6
     text-align: center
     margin-right: 3px
     border-radius: 3px
@@ -39,8 +39,7 @@
         border-top-right-radius: 3px
 
 .deposit
-        font-size: 0.643rem
-        line-height: 1.2
+        @include fontDimensions(10.8px, 9px)
         font-weight: 900
         margin: 2px auto 3px
 
