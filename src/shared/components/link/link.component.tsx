@@ -10,7 +10,7 @@ import {
   LinkProps as RouterLinkProps,
 } from 'react-router-dom';
 
-import s from './link.module.sass';
+import style from './link.module.sass';
 
 type LinkProps = {
   external?: boolean;
@@ -22,7 +22,7 @@ const Link: React.FC<LinkProps> = ({
   children,
   ...props
 }) => {
-  const compoundClassName = cn(s.root, className);
+  const compoundClassName = cn(style.root, className);
 
   const content = children;
   if (external) {

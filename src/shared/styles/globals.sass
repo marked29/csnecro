@@ -1,3 +1,4 @@
+@import './configs'
 @import "./_breakpoints"
 @import "./_variables"
 
@@ -6,7 +7,7 @@ body
   padding: 0
   margin: 0
   line-height: 1.25
-  font-size: 14px
+  font-size: ($baseHtmlFs / $browserDefaultFs) * 100%
   font-family: $font
   min-width: 320px
 
