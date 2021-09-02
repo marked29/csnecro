@@ -1,3 +1,5 @@
+@import '../../../shared/styles/_variables'
+@import '../../../shared/styles/fontUtils'
 
 .root
     display: flex
@@ -8,13 +10,12 @@
     z-index: 3
     padding: 0 20px
     width: 100%
-    background: #e5af27
+    background: $bgColor-5
     justify-content: space-between
     position: relative
 
     .promo
-        font-size: 1.25rem
-        line-height: 1.2
+        @include fontDimensions(24px, 20px)
         margin: 11px 0
 
     .icon
