@@ -1,9 +1,12 @@
-@import '../../styles/_variables'
-@import '../../styles/fontUtils'
+@import './_variables'
+@import './fontUtils'
 
 .root
     @include fontDimensions(17px, 20px)
     font-weight: $bold
     text-align: center
-    border-radius: 8px
     letter-spacing: 0.5px
+    text-transform: uppercase
+
+    &:hover
+        color: white

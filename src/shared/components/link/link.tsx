@@ -10,7 +10,7 @@ import {
   LinkProps as RouterLinkProps,
 } from 'react-router-dom';
 
-import style from './link.module.sass';
+import style from '../../styles/link.module.sass';
 
 type LinkProps = {
   external?: boolean;
