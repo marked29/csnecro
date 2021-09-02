@@ -1,14 +1,12 @@
 import { FC } from 'react';
-import Cash from '../../svg/cash';
-import Question from '../../svg/question';
-
-import Wrapper from '../wrapper/wrapper.component';
+import Cash from '../../../shared/svg/cash';
+import Question from '../../../shared/svg/question';
 
 import style from './tape.module.sass';
 
 const Tape: FC = () => {
   return (
-    <Wrapper className={style.root}>
+    <div className={style.root}>
       <div className={style.tapeLeft} />
       <div className={style.tapeCenter}>
         <Cash className={style.icon} />
@@ -19,7 +17,7 @@ const Tape: FC = () => {
         <Question className={style.icon} />
       </div>
       <div className={style.tapeRight} />
-    </Wrapper>
+    </div>
   );
 };
 

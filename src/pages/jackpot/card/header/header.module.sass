@@ -1,0 +1,31 @@
+@import "../../../../shared/styles/_variables"
+@import "../../../../shared/styles/fontUtils"
+
+.gameHeader
+    @include fontDimensions(21.6px, 18px)
+    background-color: $bgColor-1
+    display: flex
+    align-items: center
+    font-weight: 900
+    justify-content: space-between
+    margin-top: 40px
+
+.content
+    margin: 15px 0px
+
+.surface
+    @include fontDimensions(12px, 10px)
+    background-color: $bgColor-2
+    color: $text-4
+    text-align: center
+    margin-right: 10px
+    padding: 7px 11px
+    font-weight: 700 
+    border-radius: 5px
+
+    & > span
+        color: $accent
+        font-weight: 900
+
+    &:last-child
+        margin-right: 0
