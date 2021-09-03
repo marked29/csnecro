@@ -1,11 +1,12 @@
 import { FC } from 'react';
+import Skin from '../../../../shared/components/skin/skin.component';
 
 import style from './games.module.sass';
 
 const Games: FC = () => {
   return (
     <div className={style.games}>
-      <div className={style.players}>
+      <div className={style.player}>
         <div className={style.userInfo}>
           <div className={style.wrap}>
             <img className={style.avatar} src="/img/avatar.png" alt="" />
@@ -14,33 +15,13 @@ const Games: FC = () => {
           <p className={style.winnerLabel}>WINNER</p>
         </div>
         <div className={style.skins}>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
+          <Skin />
+          <Skin />
+          <Skin />
         </div>
-        <div className={style.deposite}>
-          <p> 255$</p>
-        </div>
+        <span className={style.deposite}>255$</span>
       </div>
-      <div className={style.players}>
+      <div className={style.player}>
         <div className={style.userInfo}>
           <div className={style.wrap}>
             <img className={style.avatar} src="/img/avatar.png" alt="" />
@@ -48,33 +29,13 @@ const Games: FC = () => {
           </div>
         </div>
         <div className={style.skins}>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
+          <Skin />
+          <Skin />
+          <Skin />
         </div>
-        <div className={style.deposite}>
-          <p> 255$</p>
-        </div>
+        <span className={style.deposite}>255$</span>
       </div>
-      <div className={style.players}>
+      <div className={style.player}>
         <div className={style.userInfo}>
           <div className={style.wrap}>
             <img className={style.avatar} src="/img/avatar.png" alt="" />
@@ -82,33 +43,13 @@ const Games: FC = () => {
           </div>
         </div>
         <div className={style.skins}>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
+          <Skin />
+          <Skin />
+          <Skin />
         </div>
-        <div className={style.deposite}>
-          <p> 255$</p>
-        </div>
+        <span className={style.deposite}>255$</span>
       </div>
-      <div className={style.players}>
+      <div className={style.player}>
         <div className={style.userInfo}>
           <div className={style.wrap}>
             <img className={style.avatar} src="/img/avatar.png" alt="" />
@@ -116,33 +57,13 @@ const Games: FC = () => {
           </div>
         </div>
         <div className={style.skins}>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
+          <Skin />
+          <Skin />
+          <Skin />
         </div>
-        <div className={style.deposite}>
-          <p> 255$</p>
-        </div>
+        <span className={style.deposite}>255$</span>
       </div>
-      <div className={style.players}>
+      <div className={style.player}>
         <div className={style.userInfo}>
           <div className={style.wrap}>
             <img className={style.avatar} src="/img/avatar.png" alt="" />
@@ -150,33 +71,13 @@ const Games: FC = () => {
           </div>
         </div>
         <div className={style.skins}>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
+          <Skin />
+          <Skin />
+          <Skin />
         </div>
-        <div className={style.deposite}>
-          <p> 255$</p>
-        </div>
+        <span className={style.deposite}>255$</span>
       </div>
-      <div className={style.players}>
+      <div className={style.player}>
         <div className={style.userInfo}>
           <div className={style.wrap}>
             <img className={style.avatar} src="/img/avatar.png" alt="" />
@@ -184,31 +85,11 @@ const Games: FC = () => {
           </div>
         </div>
         <div className={style.skins}>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
-          <div className={style.skin}>
-            <img
-              src="/img/avatarBig.png"
-              alt="avatar"
-              className={style.skinImg}
-            />
-          </div>
+          <Skin />
+          <Skin />
+          <Skin />
         </div>
-        <div className={style.deposite}>
-          <p> 255$</p>
-        </div>
+        <span className={style.deposite}>255$</span>
       </div>
     </div>
   );

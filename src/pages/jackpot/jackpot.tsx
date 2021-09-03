@@ -5,7 +5,7 @@ import Tape from './tape/tape';
 import Card from './card/card';
 
 import style from './jackpot.module.sass';
-import History from './history/history.component';
+import History from './history/history';
 
 const Jackpot: FC = () => {
   return (
