@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Skin from '../../../../shared/components/skin/skin.component';
+import User from '../../../../shared/components/user/user';
 
 import style from './games.module.sass';
 
@@ -7,42 +8,24 @@ const Games: FC = () => {
   return (
     <div className={style.games}>
       <div className={style.player}>
-        <div className={style.userInfo}>
-          <div className={style.wrap}>
-            <img className={style.avatar} src="/img/avatar.png" alt="" />
-            <span className={style.levelLabel}>27</span>
-          </div>
+        <div className={style.winner}>
+          <User chat={false} historyFlag={false} />
           <p className={style.winnerLabel}>WINNER</p>
         </div>
         <div className={style.skins}>
           <Skin />
           <Skin />
           <Skin />
-        </div>
-        <span className={style.deposite}>255$</span>
-      </div>
-      <div className={style.player}>
-        <div className={style.userInfo}>
-          <div className={style.wrap}>
-            <img className={style.avatar} src="/img/avatar.png" alt="" />
-            <span className={style.levelLabel}>27</span>
-          </div>
-        </div>
-        <div className={style.skins}>
-          <Skin />
           <Skin />
           <Skin />
         </div>
         <span className={style.deposite}>255$</span>
       </div>
       <div className={style.player}>
-        <div className={style.userInfo}>
-          <div className={style.wrap}>
-            <img className={style.avatar} src="/img/avatar.png" alt="" />
-            <span className={style.levelLabel}>27</span>
-          </div>
-        </div>
+        <User chat={false} historyFlag />
         <div className={style.skins}>
+          <Skin />
+          <Skin />
           <Skin />
           <Skin />
           <Skin />
@@ -50,13 +33,10 @@ const Games: FC = () => {
         <span className={style.deposite}>255$</span>
       </div>
       <div className={style.player}>
-        <div className={style.userInfo}>
-          <div className={style.wrap}>
-            <img className={style.avatar} src="/img/avatar.png" alt="" />
-            <span className={style.levelLabel}>27</span>
-          </div>
-        </div>
+        <User chat={false} historyFlag />
         <div className={style.skins}>
+          <Skin />
+          <Skin />
           <Skin />
           <Skin />
           <Skin />
@@ -64,13 +44,10 @@ const Games: FC = () => {
         <span className={style.deposite}>255$</span>
       </div>
       <div className={style.player}>
-        <div className={style.userInfo}>
-          <div className={style.wrap}>
-            <img className={style.avatar} src="/img/avatar.png" alt="" />
-            <span className={style.levelLabel}>27</span>
-          </div>
-        </div>
+        <User chat={false} historyFlag />
         <div className={style.skins}>
+          <Skin />
+          <Skin />
           <Skin />
           <Skin />
           <Skin />
@@ -78,13 +55,21 @@ const Games: FC = () => {
         <span className={style.deposite}>255$</span>
       </div>
       <div className={style.player}>
-        <div className={style.userInfo}>
-          <div className={style.wrap}>
-            <img className={style.avatar} src="/img/avatar.png" alt="" />
-            <span className={style.levelLabel}>27</span>
-          </div>
-        </div>
+        <User chat={false} historyFlag />
         <div className={style.skins}>
+          <Skin />
+          <Skin />
+          <Skin />
+          <Skin />
+          <Skin />
+        </div>
+        <span className={style.deposite}>255$</span>
+      </div>
+      <div className={style.player}>
+        <User chat={false} historyFlag />
+        <div className={style.skins}>
+          <Skin />
+          <Skin />
           <Skin />
           <Skin />
           <Skin />
