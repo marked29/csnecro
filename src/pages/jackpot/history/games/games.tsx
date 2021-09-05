@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import Skin from '../../../../shared/components/skin/skin.component';
 import User from '../../../../shared/components/user/user';
+import Arrow from '../../../../shared/svg/arrow';
 
 import style from './games.module.sass';
 
@@ -18,36 +19,19 @@ const Games: FC = () => {
           <Skin />
           <Skin />
           <Skin />
-        </div>
-        <span className={style.deposite}>255$</span>
-      </div>
-      <div className={style.player}>
-        <User chat={false} historyFlag />
-        <div className={style.skins}>
-          <Skin />
           <Skin />
           <Skin />
           <Skin />
           <Skin />
         </div>
-        <span className={style.deposite}>255$</span>
+        <span className={style.deposite}>
+          <Arrow arrowStyle={style.arrowStyle} />
+          255$
+        </span>
       </div>
       <div className={style.player}>
         <User chat={false} historyFlag />
         <div className={style.skins}>
-          <Skin />
-          <Skin />
-          <Skin />
-          <Skin />
-          <Skin />
-        </div>
-        <span className={style.deposite}>255$</span>
-      </div>
-      <div className={style.player}>
-        <User chat={false} historyFlag />
-        <div className={style.skins}>
-          <Skin />
-          <Skin />
           <Skin />
           <Skin />
           <Skin />
@@ -60,6 +44,13 @@ const Games: FC = () => {
           <Skin />
           <Skin />
           <Skin />
+        </div>
+        <span className={style.deposite}>255$</span>
+      </div>
+      <div className={style.player}>
+        <User chat={false} historyFlag />
+        <div className={style.skins}>
+          <Skin />
           <Skin />
           <Skin />
         </div>
@@ -70,6 +61,13 @@ const Games: FC = () => {
         <div className={style.skins}>
           <Skin />
           <Skin />
+          <Skin />
+        </div>
+        <span className={style.deposite}>255$</span>
+      </div>
+      <div className={style.player}>
+        <User chat={false} historyFlag />
+        <div className={style.skins}>
           <Skin />
           <Skin />
           <Skin />
