@@ -1,12 +1,20 @@
 import { FC } from 'react';
 
+import cn from 'classnames';
+
 import style from './skin.module.sass';
 
-const Skin: FC = () => {
+type SkinProps = {
+  className?: string;
+};
+
+const Skin: FC<SkinProps> = ({ className }) => {
   return (
-    <div className={style.skin}>
-      <img src="/img/avatarBig.png" alt="avatar" className={style.skinImg} />
-    </div>
+    <img
+      className={cn(className, style.skinImg)}
+      src="/img/avatarBig.png"
+      alt="avatar"
+    />
   );
 };
 export default Skin;
