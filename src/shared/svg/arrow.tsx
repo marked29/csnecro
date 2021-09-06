@@ -1,10 +1,6 @@
-import { FC } from 'react';
+import { FC, SVGProps } from 'react';
 
-type SVGProps = {
-  className?: string;
-};
-
-const Arrow: FC<SVGProps> = ({ className }) => {
+const Arrow: FC<SVGProps<SVGSVGElement>> = ({ className }) => {
   return (
     <svg
       width="11"
