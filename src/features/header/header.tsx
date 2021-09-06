@@ -1,11 +1,10 @@
 import { FC } from 'react';
-import { NavLink } from 'react-router-dom';
 import { Routes } from '../../app/shared/constants/Routes';
 
+import { NavLink } from '../../shared/components/nav-link';
 import Button from '../../shared/components/button/button.component';
-import Link from '../../shared/components/link/link.component';
+import Link from '../../shared/components/link/link';
 import Wrapper from '../../shared/components/wrapper/wrapper.component';
-
 import English from '../../shared/svg/language/english';
 import Sound from '../../shared/svg/sound';
 
@@ -15,21 +14,9 @@ const Header: FC = () => {
   return (
     <header className={style.root}>
       <Wrapper className={style.wrapper}>
-        <div className={style.game_buttons}>
-          <NavLink
-            className={style.tab}
-            activeClassName={style.active}
-            to={Routes.JACKPOT}
-          >
-            Jackpot
-          </NavLink>
-          <NavLink
-            className={style.tab}
-            activeClassName={style.active}
-            to={Routes.COINFLIP}
-          >
-            Coinflip
-          </NavLink>
+        <div>
+          <NavLink to={Routes.JACKPOT}>Jackpot</NavLink>
+          <NavLink to={Routes.COINFLIP}>Coinflip</NavLink>
         </div>
         <div className={style.tools}>
           <nav className={style.navigation}>
