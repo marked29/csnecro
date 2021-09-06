@@ -3,23 +3,22 @@ import { FC } from 'react';
 import style from './user.module.sass';
 
 type UserProps = {
-  chat: boolean;
-  historyFlag: boolean;
+  className?: string;
+  winnerLabel?: boolean;
 };
 
-const User: FC<UserProps> = ({ chat, historyFlag }) => {
+const User: FC<UserProps> = ({ className, winnerLabel }) => {
   return (
-    <div
-      className={style.userInfo}
-      style={historyFlag ? { padding: '10px 20px 10px' } : { padding: 'none' }}
-    >
+    <div className={className}>
       <img className={style.avatar} src="/img/avatar.png" alt="" />
       <span className={style.levelLabel}>27</span>
-      {chat && (
-        <>
-          <span className={style.userName}>Username</span>
-          <span className={style.message}> Lorem ipsum ipsum</span>
-        </>
+
+      <span className={style.userName}>Username</span>
+      <span className={style.message}> Lorem ipsum ipsum</span>
+      {winnerLabel && (
+        <div className={style.winner}>
+          <p>WINNER</p>
+        </div>
       )}
     </div>
   );

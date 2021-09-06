@@ -10,7 +10,7 @@ import style from './chat-item.module.sass';
 export const ChatItem: FC = () => {
   return (
     <div className={style.root}>
-      <User chat historyFlag={false} />
+      <User className={style.userInfo} />
 
       <div className={style.chatListActions}>
         <IconButton size="sm" color="transparent">

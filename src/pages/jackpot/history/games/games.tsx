@@ -9,10 +9,7 @@ const Games: FC = () => {
   return (
     <div className={style.games}>
       <div className={style.player}>
-        <div className={style.winner}>
-          <User chat={false} historyFlag={false} />
-          <p className={style.winnerLabel}>WINNER</p>
-        </div>
+        <User className={style.userInfo} winnerLabel />
         <div className={style.skins}>
           <Skin />
           <Skin />
@@ -25,12 +22,12 @@ const Games: FC = () => {
           <Skin />
         </div>
         <span className={style.deposite}>
-          <Arrow arrowStyle={style.arrowStyle} />
+          <Arrow className={style.arrowStyle} />
           255$
         </span>
       </div>
       <div className={style.player}>
-        <User chat={false} historyFlag />
+        <User className={style.userInfo} />
         <div className={style.skins}>
           <Skin />
           <Skin />
@@ -39,7 +36,7 @@ const Games: FC = () => {
         <span className={style.deposite}>255$</span>
       </div>
       <div className={style.player}>
-        <User chat={false} historyFlag />
+        <User className={style.userInfo} />
         <div className={style.skins}>
           <Skin />
           <Skin />
@@ -48,7 +45,7 @@ const Games: FC = () => {
         <span className={style.deposite}>255$</span>
       </div>
       <div className={style.player}>
-        <User chat={false} historyFlag />
+        <User className={style.userInfo} />
         <div className={style.skins}>
           <Skin />
           <Skin />
@@ -57,7 +54,7 @@ const Games: FC = () => {
         <span className={style.deposite}>255$</span>
       </div>
       <div className={style.player}>
-        <User chat={false} historyFlag />
+        <User className={style.userInfo} />
         <div className={style.skins}>
           <Skin />
           <Skin />
@@ -66,7 +63,7 @@ const Games: FC = () => {
         <span className={style.deposite}>255$</span>
       </div>
       <div className={style.player}>
-        <User chat={false} historyFlag />
+        <User className={style.userInfo} />
         <div className={style.skins}>
           <Skin />
           <Skin />

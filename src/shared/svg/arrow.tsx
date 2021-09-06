@@ -1,10 +1,10 @@
 import { FC } from 'react';
 
-type ArrowProps = {
-  arrowStyle?: string;
+type SVGProps = {
+  className?: string;
 };
 
-const Arrow: FC<ArrowProps> = ({ arrowStyle }) => {
+const Arrow: FC<SVGProps> = ({ className }) => {
   return (
     <svg
       width="11"
@@ -12,7 +12,7 @@ const Arrow: FC<ArrowProps> = ({ arrowStyle }) => {
       viewBox="0 0 11 11"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={arrowStyle}
+      className={className}
     >
       <rect
         x="4.50006"

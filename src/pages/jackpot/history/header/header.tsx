@@ -12,7 +12,7 @@ const Header: FC = () => {
       <div className={style.content}>
         <div className={style.gameNumber}>Game # 3445</div>
         <div className={style.showMore}>
-          Close info <Arrow arrowStyle={style.arrowStyle} />
+          Close info <Arrow className={style.arrowStyle} />
         </div>
         <div className={style.hash}>
           <p>
