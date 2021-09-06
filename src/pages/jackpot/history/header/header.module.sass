@@ -1,0 +1,45 @@
+@import "../../../../shared/styles/_variables"
+@import "../../../../shared/styles/fontUtils"
+
+.header
+    @include fontDimensions(21.6px, 18px)
+    background-color: $bgColor-1
+    display: flex
+    align-items: center
+    font-weight: 900
+    justify-content: space-between
+    border: 1px solid #E5AF27
+    box-sizing: border-box
+    border-radius: 5px
+
+.content
+    margin-top: 6px
+    margin-bottom: 8px
+    display: flex
+    width: 100%
+    align-items: center;
+    justify-content: space-between
+
+.gameNumber
+    @include fontDimensions(14.4px, 12px)
+    font-weight: 900
+
+.showMore
+    @include fontDimensions(12px, 10px)
+    font-weight: 900
+    color: $text-2
+
+.hash
+    @include fontDimensions(14.4px, 12px)
+    font-weight: 400
+    color: $text-3
+    position: relative;
+    left: 7%;
+    
+.counter
+    color: $secondaryColor
+    padding: 0 5px
+
+.arrowStyle
+    position: relative
+    top: 3px

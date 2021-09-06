@@ -1,0 +1,67 @@
+@import "../../../../shared/styles/_variables"
+@import "../../../../shared/styles/fontUtils"
+@import "../../../../shared/styles/common"
+
+.games
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    &:nth-of-type(3n+2)
+        grid-gap: 0 30px
+
+    
+
+.player
+    display: grid
+    grid-template-columns: 1fr 3fr 1fr
+    vertical-align: center
+    margin-top: 10px
+    box-sizing: border-box
+    border-radius: 5px
+    background-color: $bgColor-4
+    margin-top: 10px
+    margin-bottom: 0px
+
+    &:nth-of-type(1)
+        border: 1px solid #E6AF27
+
+    &:nth-of-type(1) .userInfo
+        display: grid 
+        grid-template-areas: "avatar level"  "winner winner"
+
+.userInfo
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 10px 20px 10px
+
+    & > span:nth-of-type(2),
+    & > span:nth-of-type(3)
+        display: none 
+  
+.skins
+    overflow: scroll
+    align-self: center
+    overflow-x: auto
+    white-space: nowrap
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+    &::-webkit-scrollbar 
+        display: none
+    
+
+.deposite
+    @include fontDimensions(13.2px, 11px)
+    position: relative
+    font-weight: 900
+    padding: 20px 20px 21px
+    box-shadow: -15px 0 10px #292b32
+    justify-self: center
+    align-items: center
+
+.arrowStyle
+    transform: rotate(90deg)
+    position: absolute
+    top: 40%
+    right: 60px
+
