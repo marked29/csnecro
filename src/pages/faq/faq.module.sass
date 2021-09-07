@@ -1,0 +1,75 @@
+@import '../../shared/styles/_variables'
+@import '../../shared/styles/fontUtils'
+
+.root
+    height: 100%
+    min-width: 1550px
+    background-color: $primary
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+.tabTitle,.listOfText
+    padding: 50px
+    background-color: $bgColor-1
+    color: $primaryColor
+    margin: 30px
+
+.tabTitle
+    margin-right: 0px
+
+    h1
+        @include fontDimensions(21.6px, 18px)
+        font-width: 900    
+
+.textTab
+    @include fontDimensions(16.8px, 14px)
+    font-weight: 400
+    color: $secondaryColor
+
+
+.listOfText
+    margin-left: 0px
+
+    ul         
+        width: 670px
+    
+    li
+        @include fontDimensions(16.8px, 14px)
+        align-items: center
+        width: 670px
+        background-color: $secondaryLight
+        padding: 20px 30px 20px 30px
+        margin: 10px 0
+        font-weight: 700
+        color: $secondaryColor
+        border-radius: 5px
+
+        span
+            display: flex
+            justify-content: space-between
+            text-transform: uppercase
+
+        p:nth-of-type(2)
+            padding-top: 20px
+            font-weight: 400
+    
+    .openedList
+        border: 1px solid $accent
+        span 
+            color: $accent
+
+.icon
+    background-color: $bgColor-6
+    display: flex
+    height: 24px
+    width: 24px
+    justify-content: center
+    border-radius: 4px
+    padding: 6px
+
+    svg
+        align-self: center
+        
+
+
+

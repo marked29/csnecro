@@ -32,9 +32,7 @@ const Header: FC = () => {
                 </Link>
               </li>
               <li>
-                <Link external to="/faq">
-                  Faq
-                </Link>
+                <NavLink to={Routes.FAQ}>Faq</NavLink>
               </li>
               <li>
                 <Link external to="/">
