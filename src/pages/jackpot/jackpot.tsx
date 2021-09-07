@@ -10,7 +10,7 @@ import History from './history/history';
 const Jackpot: FC = () => {
   return (
     <div className={style.root}>
-      <Wrapper biggerPadding>
+      <Wrapper paddingSize="md">
         <Tape />
         <Card />
         <History />
