@@ -32,7 +32,7 @@ const Header: FC = () => {
                 </Link>
               </li>
               <li>
-                <Link external to="/">
+                <Link external to="/faq">
                   Faq
                 </Link>
               </li>
