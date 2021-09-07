@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import Wrapper from '../../shared/components/wrapper/wrapper.component';
+import RuleCard from './rulesCard/rulesCard';
 // import { IconButton } from '../../shared/components/icon-button';
 
 // import Minus from '../../shared/svg/minus';
@@ -54,37 +55,14 @@ const Faq: FC = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <ul className={style.rules}>
-          <li>
-            <div>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing </h5>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.{' '}
-              </p>
-            </div>
+          <li className={style.rule}>
+            <RuleCard />
           </li>
-          <li>
-            <p>content</p>
+          <li className={style.rule}>
+            <RuleCard />
           </li>
-          <li>
-            <p>content</p>
-          </li>
-          <li>
-            <p>content</p>
-          </li>
-          <li>
-            <p>content</p>
-          </li>
-          <li>
-            <p>content</p>
-          </li>
-          <li>
-            <p>content</p>
+          <li className={style.rule}>
+            <RuleCard />
           </li>
         </ul>
       </Wrapper>
