@@ -8,7 +8,7 @@ import style from './header.module.sass';
 
 const Header: FC = () => {
   return (
-    <Wrapper biggerPadding className={style.header}>
+    <Wrapper paddingSize="md" className={style.header}>
       <div className={style.content}>
         <div className={style.gameNumber}>Game # 3445</div>
         <div className={style.showMore}>

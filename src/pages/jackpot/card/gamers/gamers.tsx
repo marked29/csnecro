@@ -15,9 +15,9 @@ type GamerProps = {
 
 const Gamers: FC<GamerProps> = () => {
   return (
-    <Wrapper biggerPadding className={style.gamer_surface}>
+    <Wrapper paddingSize="md" className={style.gamer_surface}>
       {userList.map((user) => (
-        <Wrapper biggerPadding className={style.gamer} key={user}>
+        <Wrapper paddingSize="md" className={style.gamer} key={user}>
           <div className={style.gamer_name}>
             <h4>{user}</h4>
             <span className={style.gamer_percent_title}>
