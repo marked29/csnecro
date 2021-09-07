@@ -1,0 +1,24 @@
+@import '../../../../shared/styles/_variables'
+@import '../../../../shared/styles/fontUtils'
+
+.root
+    background-color: $bgColor-2
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px
+
+.avatars
+    display: flex
+    justify-content: space-between
+
+    & > *
+        margin-right: 10px
+
+        &:nth-child(even)
+            img
+                border-color: $accent
+
+.buttons
+    & button:not(:last-child)
+        margin-right: 10px

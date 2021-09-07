@@ -5,8 +5,22 @@
     display: flex
     flex-direction: column
     justify-content: space-between
-    width: 350px
+    width: 445px
     background-color: $bgColor-1
+
+.closed
+    width: 130px
+
+    & .header
+        padding: 10px
+        .title
+            @include fontDimensions(17px, 14px)
+
+    & button rect
+        fill: #32353D
+
+    & .items
+        padding: 0px 10px 13px 10px
 
 .header
     font-weight: 900
@@ -14,4 +28,8 @@
     color: white
     justify-content: space-between
     align-content: center
+    align-items: center
     padding: 20px
+
+.items
+    flex-grow: 1
