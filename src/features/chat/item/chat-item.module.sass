@@ -1,5 +1,6 @@
 @import '../../../shared/styles/_variables'
 @import '../../../shared/styles/fontUtils'
+@import '../../../shared/styles/common'
 
 .root
   display: flex
@@ -8,27 +9,9 @@
   padding: 7px 0px 7px 0px
   cursor: pointer
 
-.avatar
-  width: 16px
-  height: 16px
-  border-radius: 2px 0px 0px 2px
-
 .userInfo
   display: flex
-  width: 100%
   align-items: center
-
-.levelLabel
-  @include fontDimensions(12px, 10px)
-  padding: 2px 7px 2px 6px
-  display: flex
-  align-items: center
-  justify-content: center
-  background-color: $carousel-1
-  font-weight: bold
-  height: 16px
-  width: 25px
-  border-radius: 0px 2px 2px 0px
 
 .userName
   border-right: 3px solid $accent

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-import Jackpot from '../../../pages/jackpot/jackpot.component';
+import Jackpot from '../../../pages/jackpot/jackpot';
 import Header from '../../../features/header/header';
 import Footer from '../../../features/footer/Footer';
 import { Chat } from '../../../features/chat/chat';
