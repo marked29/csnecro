@@ -1,8 +1,10 @@
 import classNames from 'classnames';
 import { FC, useState } from 'react';
-import { Button } from '../../../shared/components/button';
+
 import ArrowLeft from '../../../shared/svg/arrow-left';
 import ArrowRight from '../../../shared/svg/arrow-right';
+import { Wrapper } from '../../../shared/components/wrapper';
+import { Button } from '../../../shared/components/button';
 import { ConflipHistoryItem } from './conflip-history-item';
 
 import style from './conflip-history.module.sass';
@@ -25,11 +27,11 @@ export const ConflipHistory: FC = () => {
           {!isOpened && <ArrowLeft />}
         </Button>
       </div>
-      <div className={style.items}>
+      <Wrapper className={style.items}>
         {items.map((id) => (
           <ConflipHistoryItem key={id} hideDetails={!isOpened} />
         ))}
-      </div>
+      </Wrapper>
     </div>
   );
 };

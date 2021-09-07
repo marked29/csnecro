@@ -17,9 +17,11 @@ const Layout: FC = () => {
       <Chat />
       <div className={style.wrapper}>
         <Header />
-        <Route path={Routes.JACKPOT} component={Jackpot} />
-        <Route path={Routes.COINFLIP} component={Conflip} />
-        <Route path={Routes.FAQ} component={Faq} />
+        <main className={style.main}>
+          <Route path={Routes.JACKPOT} component={Jackpot} />
+          <Route path={Routes.COINFLIP} component={Conflip} />
+          <Route path={Routes.FAQ} component={Faq} />
+        </main>
 
         <Redirect to={Routes.JACKPOT} />
         <Footer />

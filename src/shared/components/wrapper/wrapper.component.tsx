@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import cn from 'classnames';
+import { FC } from 'react';
 
 import style from './wrapper.module.sass';
 
@@ -14,7 +14,7 @@ type WrapperProps = {
   className?: string;
 };
 
-const Wrapper: FC<WrapperProps> = ({
+export const Wrapper: FC<WrapperProps> = ({
   paddingSize = 'sm',
   className,
   children,
