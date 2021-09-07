@@ -13,8 +13,8 @@ const Faq: FC = () => {
   return (
     <div className={style.root}>
       <h2 className={style.header}>TEXT TAB TITLE H2</h2>
-      <Wrapper className={style.wrapper}>
-        <p>
+      <Wrapper paddingSize="lg" className={style.wrapper}>
+        <p className={style.main}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
