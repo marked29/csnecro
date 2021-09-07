@@ -25,7 +25,11 @@ export const ConflipHistoryItemClosed: FC<ConflipHistoryItemClosedProps> = ({
     <>
       <div className={style.avatars}>
         {MOCK_USERS.map(({ winner, avatar }) => (
-          <HistoryUserAvatar winner={winner} avatar={avatar} />
+          <HistoryUserAvatar
+            winner={winner}
+            avatar={avatar}
+            className={style.avatar}
+          />
         ))}
       </div>
       {!hideDetails && (

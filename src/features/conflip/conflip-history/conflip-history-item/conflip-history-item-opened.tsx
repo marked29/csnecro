@@ -1,8 +1,8 @@
 import { FC } from 'react';
+
 import { Button } from '../../../../shared/components/button';
 import { BetAmount } from '../../bet-amount';
 import { SkinsList } from '../../skins-list';
-// import { BetAmount } from '../bet-amount';
 import { HistoryUserAvatar } from '../history-user-avatar';
 
 import style from './conflip-history-item-opened.module.sass';
@@ -73,7 +73,6 @@ export const ConflipHistoryItemOpened: FC<ConflipHistoryItemOpenedProps> = ({
           </div>
         </div>
       ))}
-      {/* <BetAmount amount={totalBet} /> */}
     </>
   );
 };
