@@ -1,6 +1,7 @@
 @import './configs'
 @import "./_breakpoints"
 @import "./_variables"
+@import './fontUtils'
 
 html,
 body
@@ -9,7 +10,7 @@ body
   line-height: 1.25
   font-size: ($baseHtmlFs / $browserDefaultFs) * 100%
   font-family: $font
-  min-width: 320px
+  min-width: fit-content
 
 svg, path, rect
 
@@ -29,18 +30,19 @@ h1, h2, h3, h4, h5, h6, p
 h1, h2, h3, h4, h5, h6
   font-style: normal
   font-weight: 600
+  text-transform: uppercase
 
 h1
-  font-size: 3.143rem
-  line-height: 1.45
+  @include fontDimensions($lineHeightPx: 48px , $fontSizePx: 48px)
 
 h2
-  font-size: 2.286rem
-  line-height: 1.5
+  @include fontDimensions($lineHeightPx: 36px , $fontSizePx: 36px)
 
 h3
-  font-size: 1.714rem
-  line-height: 1.33
+  @include fontDimensions($lineHeightPx: 29px , $fontSizePx: 24px)
+
+h4
+  @include fontDimensions($lineHeightPx: 22px , $fontSizePx: 18px)
 
 h4
   font-size: 1.286rem
