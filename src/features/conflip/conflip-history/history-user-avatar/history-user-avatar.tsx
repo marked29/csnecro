@@ -17,7 +17,7 @@ export const HistoryUserAvatar: FC<HistoryUserAvatarProps> = ({
   return (
     <div className={cn(style.avatar, className)}>
       <img src={avatar} alt="avatar" />
-      {winner && <span className={style.winnerLabel}>winner</span>}
+      {winner && <span className={style.winnerLabel}>Winner</span>}
     </div>
   );
 };
