@@ -2,18 +2,13 @@ import { FC } from 'react';
 
 import Wrapper from '../../shared/components/wrapper/wrapper.component';
 import RuleCard from './rulesCard/rulesCard';
-// import { IconButton } from '../../shared/components/icon-button';
-
-// import Minus from '../../shared/svg/minus';
-// import Plus from '../../shared/svg/plus';
 
 import style from './faq.module.sass';
 
 const Faq: FC = () => {
-  // const [openDetails, setOpenDetails] = useState(false);
   return (
     <div className={style.root}>
-      <h2 className={style.header}>TEXT TAB TITLE H2</h2>
+      <h2 className={style.header}>TEXT TAB TITLE H2 </h2>
       <Wrapper paddingSize="lg" className={style.wrapper}>
         <p className={style.main}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do

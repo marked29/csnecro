@@ -1,5 +1,5 @@
-import { FC, useState } from 'react';
 import cn from 'classnames';
+import { FC, useState } from 'react';
 
 import Wrapper from '../../../shared/components/wrapper/wrapper.component';
 import { IconButton } from '../../../shared/components/icon-button';
@@ -11,7 +11,7 @@ import style from './rulesCard.module.sass';
 
 const RuleCard: FC = () => {
   const [openDetails, setOpenDetails] = useState(false);
-  const compoundClassName = cn(style.root, openDetails ? style.active : '');
+  const compoundClassName = cn(style.root, { [style.active]: openDetails });
 
   return (
     <div className={compoundClassName}>
@@ -23,7 +23,7 @@ const RuleCard: FC = () => {
               setOpenDetails(!openDetails);
             }}
           >
-            {!openDetails ? <Plus /> : <Minus />}
+            {openDetails ? <Minus /> : <Plus />}
           </IconButton>
         </h5>
         {openDetails && (
