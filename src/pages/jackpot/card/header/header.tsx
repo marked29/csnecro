@@ -12,7 +12,7 @@ const headerTitlesRight = ['TIME', 'TOTAL', 'USERS'];
 
 const Header: FC<HeaderProps> = ({ gameId = '# 3445' }) => {
   return (
-    <Wrapper biggerPadding className={style.gameHeader}>
+    <Wrapper paddingSize="md" className={style.gameHeader}>
       <div className={style.content}>
         {headerTitlesLeft.map((title) => (
           <span className={style.surface} key={title}>

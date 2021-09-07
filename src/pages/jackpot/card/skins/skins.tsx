@@ -12,7 +12,7 @@ type SkinsProps = {
 
 const Skins: FC<SkinsProps> = () => {
   return (
-    <Wrapper biggerPadding className={style.betted_skins}>
+    <Wrapper paddingSize="md" className={style.betted_skins}>
       <div className={style.bet}>
         <div className={style.what}>
           <span>
