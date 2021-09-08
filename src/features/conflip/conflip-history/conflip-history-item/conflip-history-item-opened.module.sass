@@ -1,0 +1,46 @@
+@import '../../../../shared/styles/_variables'
+@import '../../../../shared/styles/fontUtils'
+
+.user
+    display: flex
+    flex-direction: column
+    padding-top: 10px
+    padding-bottom: 10px
+
+.details
+    display: flex
+    margin-bottom: 10px
+
+.avatar
+    & img
+        border-top-right-radius: 0px
+
+.levelLabel
+    @include fontDimensions(12px, 10px)
+    background: #45729B
+    border-top-right-radius: 2px
+    border-bottom-right-radius: 2px
+    width: 37px
+    height: 14px
+    font-weight: 900
+    color: white
+    text-align: center
+
+.buttons
+    display: flex
+    width: 100%
+    justify-content: flex-end
+    padding-top: 9px
+    & button:not(:last-child)
+        margin-right: 10px
+
+.skinsBet
+    display: flex
+    justify-content: space-between
+
+.bet
+    background: #22242B
+    border-radius: 5px
+    display: flex
+    align-items: center
+    padding: 5px 10px

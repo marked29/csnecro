@@ -6,6 +6,7 @@ import Button from '../../../../shared/components/button/button.component';
 import style from './skins.module.sass';
 
 const skinsList = ['255$', '200$', '50$', '29$', '220$', '210$', '90$'];
+
 type SkinsProps = {
   skin?: object;
 };

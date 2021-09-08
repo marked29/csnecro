@@ -7,6 +7,9 @@
     letter-spacing: 0.5px
     padding: 10px 24px
     text-align: center
+    display: inline-flex
+    align-items: center
+    justify-content: center
 
 .primary
     background-color: $accent
@@ -14,6 +17,9 @@
     text-transform: uppercase
     &:hover
         color: white
+
+        & rect, path
+            fill: white
 
 .transparent
     background-color: transparent
@@ -29,3 +35,6 @@
 .sm
     @include fontDimensions(11px, 9px)
     padding: 6px 10px 5px 10px
+
+    svg
+        margin-top: rem(2px)

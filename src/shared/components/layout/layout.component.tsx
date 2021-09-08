@@ -1,13 +1,13 @@
 import { FC } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 
+import Jackpot from '../../../pages/jackpot/jackpot';
 import Header from '../../../features/header/header';
 import Footer from '../../../features/footer/Footer';
-import { Chat } from '../../../features/chat/chat';
-import Jackpot from '../../../pages/jackpot/jackpot';
 import Faq from '../../../pages/faq/faq';
-
-import { Routes } from '../../../app/shared/constants/Routes';
+import { Chat } from '../../../features/chat/chat';
+import { Conflip } from '../../../features/conflip';
+import { Routes } from '../../../app/shared/constants';
 
 import style from './layout.module.sass';
 
@@ -17,8 +17,13 @@ const Layout: FC = () => {
       <Chat />
       <div className={style.wrapper}>
         <Header />
-        <Route exact path={['/', Routes.JACKPOT]} component={Jackpot} />
-        <Route path={Routes.FAQ} component={Faq} />
+        <main className={style.main}>
+          <Route path={Routes.JACKPOT} component={Jackpot} />
+          <Route path={Routes.COINFLIP} component={Conflip} />
+          <Route path={Routes.FAQ} component={Faq} />
+        </main>
+
+        <Redirect to={Routes.JACKPOT} />
         <Footer />
       </div>
     </div>
