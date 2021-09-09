@@ -4,16 +4,21 @@ import Wrapper from '../../../../shared/components/wrapper/wrapper.component';
 import Button from '../../../../shared/components/button/button.component';
 
 import style from './skins.module.sass';
+import { Skin } from '.';
 
-const skinsList = ['255$', '200$', '50$', '29$', '220$', '210$', '90$'];
+const skinsList = ['255$', '200$', '50$', '29$', '220$', '210$', '90$'].map(
+  (deposit, index) => ({
+    name: `skin ${index}${1}`,
+    deposit,
+    avatar: '/img/avatarBig.png',
+  })
+);
 
-type SkinsProps = {
-  skin?: object;
-};
+type SkinsProps = {};
 
 const Skins: FC<SkinsProps> = () => {
   return (
-    <Wrapper paddingSize="md" className={style.betted_skins}>
+    <Wrapper paddingSize="md" className={style.root}>
       <div className={style.bet}>
         <div className={style.what}>
           <span>
@@ -22,15 +27,7 @@ const Skins: FC<SkinsProps> = () => {
         </div>
         <div className={style.skins}>
           {skinsList.map((skin) => (
-            <div className={style.skin} key={skin}>
-              <img
-                src="/img/avatarBig.png"
-                alt="avatar"
-                className={style.skinImg}
-              />
-              <br />
-              <p className={style.deposit}>{skin}</p>
-            </div>
+            <Skin {...skin} className={style.skin} />
           ))}
         </div>
         <Button size="lg">Deposit</Button>
