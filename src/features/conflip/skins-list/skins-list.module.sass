@@ -1,0 +1,19 @@
+@import '../../../shared/styles/_variables'
+@import '../../../shared/styles/fontUtils'
+
+.root
+    display: flex
+    align-items: center
+
+    img
+        width: 36px
+        height: 36px
+        border: 1px solid $carousel-1
+        border-radius: 3px
+
+        &:not(:last-child)
+            margin-right: 5px
+
+    span
+        @include fontDimensions(12px , 10px)
+        color: $text-3

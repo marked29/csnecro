@@ -1,10 +1,6 @@
-import { FC } from 'react';
+import { FC, SVGProps } from 'react';
 
-type IconProps = {
-  className?: string;
-};
-
-const Cash: FC<IconProps> = ({ className }) => {
+const Cash: FC<SVGProps<SVGSVGElement>> = ({ className }) => {
   return (
     <svg
       className={className}

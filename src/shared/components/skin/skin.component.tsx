@@ -6,16 +6,21 @@ import cn from 'classnames';
 import style from './skin.module.sass';
 
 type SkinProps = {
+  avatar?: string;
   className?: string;
   tooltip?: string;
 };
 
-const Skin: FC<SkinProps> = ({ className, tooltip }) => {
+const Skin: FC<SkinProps> = ({
+  className,
+  avatar = '/img/avatarBig.png',
+  tooltip,
+}) => {
   return (
     <>
       <img
         className={cn(className, style.skinImg)}
-        src="/img/avatarBig.png"
+        src={avatar}
         alt="avatar"
         data-tip={tooltip || 'skin name'}
       />
@@ -23,4 +28,5 @@ const Skin: FC<SkinProps> = ({ className, tooltip }) => {
     </>
   );
 };
+
 export default Skin;
