@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-import Jackpot from '../../../pages/jackpot/jackpot';
+import Jackpot from '../../../features/jackpot/jackpot';
 import Header from '../../../features/header/header';
 import Footer from '../../../features/footer/Footer';
-import Faq from '../../../pages/faq/faq';
+import Faq from '../../../features/faq/faq';
 import { Chat } from '../../../features/chat/chat';
 import { Conflip } from '../../../features/conflip';
 import { Routes } from '../../../app/shared/constants';
