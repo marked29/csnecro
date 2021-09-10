@@ -5,8 +5,8 @@ import Gamer from './gamer';
 
 import style from './gamers.module.sass';
 
-const createSkins = (depostits: string[]) =>
-  depostits.map((deposit, index) => ({
+const createSkins = (deposits: string[]) =>
+  deposits.map((deposit, index) => ({
     name: `skin ${index}${1}`,
     deposit,
     avatar: '/img/avatarBig.png',

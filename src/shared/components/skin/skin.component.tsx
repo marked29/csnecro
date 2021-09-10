@@ -1,8 +1,7 @@
 import { FC } from 'react';
-import ReactTooltip from 'react-tooltip';
-
 import cn from 'classnames';
 
+import ReactTooltip from 'react-tooltip';
 import style from './skin.module.sass';
 
 type SkinProps = {
