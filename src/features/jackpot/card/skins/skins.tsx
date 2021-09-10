@@ -6,7 +6,7 @@ import Button from '../../../../shared/components/button/button.component';
 import style from './skins.module.sass';
 import { Skin } from '.';
 
-const skinsList = ['255$', '200$', '50$', '29$', '220$', '210$', '90$'].map(
+const skinsList = ['$255.00', '200$', '50$', '29$', '220$', '210$', '90$'].map(
   (deposit, index) => ({
     name: `skin ${index}${1}`,
     deposit,

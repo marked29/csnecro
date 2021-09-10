@@ -14,7 +14,10 @@ export type HeaderProps = {
 
 export const Header: FC<HeaderProps> = ({ onToggleCard, isExpanded }) => {
   return (
-    <Wrapper paddingSize="md" className={style.header}>
+    <Wrapper
+      paddingSize="md"
+      className={isExpanded ? style.expanded : style.header}
+    >
       <div className={style.content}>
         <div className={style.gameNumber}>Game # 3445</div>
         <Button

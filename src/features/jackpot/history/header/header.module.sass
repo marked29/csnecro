@@ -1,24 +1,26 @@
 @import "../../../../shared/styles/_variables"
 @import "../../../../shared/styles/fontUtils"
 
-.header
+.expanded, .header
     @include fontDimensions(21.6px, 18px)
-    background-color: $bgColor-1
+    background-color: $text-6
     display: flex
     align-items: center
     font-weight: 900
     justify-content: space-between
-    border: 1px solid #E5AF27
     box-sizing: border-box
     border-radius: 5px
+
+.expanded
+    border: 1px solid #E5AF27
 
 .content
     margin-top: 6px
     margin-bottom: 8px
-    display: flex
+    display: grid
+    grid-template-columns: 3fr 1.2fr 2.5fr 0.2fr
     width: 100%
     align-items: center
-    justify-content: space-between
 
 .gameNumber
     @include fontDimensions(14.4px, 12px)
