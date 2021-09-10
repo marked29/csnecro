@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import ReactTooltip from 'react-tooltip';
 
 import Wrapper from '../../../../shared/components/wrapper/wrapper.component';
 import Button from '../../../../shared/components/button/button.component';
@@ -11,9 +12,10 @@ type GamerProps = {
   deposit?: string;
   percentage?: string;
   lvl?: number;
+  tooltip?: string;
 };
 
-const Gamers: FC<GamerProps> = () => {
+const Gamers: FC<GamerProps> = ({ tooltip }) => {
   return (
     <Wrapper biggerPadding className={style.gamer_surface}>
       {userList.map((user) => (
@@ -24,10 +26,11 @@ const Gamers: FC<GamerProps> = () => {
               Percent: <p className={style.gamer_percent}>9.15%</p>
             </span>
           </div>
-          <div className={style.gamer_avatar}>
+          <div className={style.gamer_avatar} data-tip={tooltip || 'avatar'}>
             <p className={style.gamer_lvl}>25</p>
             <img src="/img/avatarBig.png" alt="avatar" />
             <p className={style.gamer_deposit}>255$</p>
+            <ReactTooltip />
           </div>
           <Button size="sm">Show skins</Button>
         </Wrapper>
