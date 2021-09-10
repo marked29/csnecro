@@ -21,10 +21,10 @@ export const ConflipHistory: FC = () => {
         <Button size="sm" onClick={() => setIsOpened(!isOpened)}>
           {isOpened && (
             <>
-              Hide <ArrowRight />
+              Hide <ArrowRight className={style.arrow} />
             </>
           )}
-          {!isOpened && <ArrowLeft />}
+          {!isOpened && <ArrowLeft className={style.arrow} />}
         </Button>
       </div>
       <Wrapper className={style.items}>

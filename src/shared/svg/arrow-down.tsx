@@ -1,6 +1,6 @@
 import { FC, SVGProps } from 'react';
 
-const ArrowLeft: FC<SVGProps<SVGSVGElement>> = ({ className }) => {
+const ArrowDown: FC<SVGProps<SVGSVGElement>> = ({ className }) => {
   return (
     <svg
       width="9"
@@ -11,25 +11,25 @@ const ArrowLeft: FC<SVGProps<SVGSVGElement>> = ({ className }) => {
       className={className}
     >
       <rect
-        x="0.5"
-        y="4.5"
+        x="4.49994"
+        y="8.5"
         width="5.79073"
         height="1.44768"
         rx="0.723841"
-        transform="rotate(-45 0.5 4.5)"
+        transform="rotate(-135 4.49994 8.5)"
         fill="#A2A2A2"
       />
       <rect
-        x="4.59467"
-        y="8.59473"
+        x="8.59467"
+        y="4.40533"
         width="5.79073"
         height="1.44768"
         rx="0.723841"
-        transform="rotate(-135 4.59467 8.59473)"
+        transform="rotate(135 8.59467 4.40533)"
         fill="#A2A2A2"
       />
     </svg>
   );
 };
 
-export default ArrowLeft;
+export default ArrowDown;
