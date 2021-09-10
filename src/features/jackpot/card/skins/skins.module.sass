@@ -1,0 +1,36 @@
+@import "../../../../shared/styles/_variables"
+@import "../../../../shared/styles/fontUtils"
+
+.root
+    margin-top: 30px
+    padding-bottom: 35px
+
+.what
+    @include fontDimensions(14.4px, 12px)
+    padding: 22px 18px
+    background-color: $bgColor-6
+    text-transform: uppercase
+    font-weight: 900
+    color: $accent
+
+    & span > p
+        color: white
+        @include fontDimensions(18.51px, 15.43px)
+
+.bet
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-right: 20px
+    background-color: $primary
+
+.skins
+    display: flex
+
+.skin
+    margin: 0px 1.5px
+
+.deposit
+    @include fontDimensions(10.8px, 9px)
+    font-weight: 900
+    margin: 2px auto 3px

@@ -1,0 +1,69 @@
+@import "../../../../shared/styles/_variables"
+@import "../../../../shared/styles/fontUtils"
+
+.root
+    position: relative
+
+.userCard
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: $bgColor-4
+    padding-top: 40px
+    padding-bottom: 22px
+    border-bottom: 15px solid tomato
+    width: 365px
+    &:nth-last-child(odd)
+        background-color: $bgColor-3
+
+.name
+    margin-right: 40px
+
+.avatar
+    background-color: $bgColor-6
+    text-align: center
+    margin-right: 50px
+    border-radius: 5px
+    position: relative
+
+.lvl
+    @include fontDimensions(12px, 10px)
+    position: absolute
+    margin-left: 50px
+    padding: 2px 6px
+    background-color: $carousel-1
+
+.deposit
+    @include fontDimensions(10.8px, 9px)
+    font-weight: 900
+    margin: 2px auto 3px
+
+.percent_title
+    @include fontDimensions(14.4px, 12px)
+    display: flex
+    font-weight: 400
+    margin-top: 4px
+
+.percent
+    color: $carousel-1
+    padding: 0 5px
+
+.btn
+    min-width: 75px
+
+.skins
+    position: absolute
+    display: flex
+    flex-wrap: wrap
+    background-color: $bgColor-4
+    width: 100%
+    border-radius: 0px 0px 10px 10px
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    padding: 10px
+
+.skin
+    margin: 4.5px
+
+    & > img
+        height: 60px
+        width: 60px

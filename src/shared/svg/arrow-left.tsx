@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import { FC, SVGProps } from 'react';
 
-const ArrowLeft: FC = () => {
+const ArrowLeft: FC<SVGProps<SVGSVGElement>> = ({ className }) => {
   return (
     <svg
       width="9"
@@ -8,6 +8,7 @@ const ArrowLeft: FC = () => {
       viewBox="0 0 9 9"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <rect
         x="0.5"

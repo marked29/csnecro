@@ -1,0 +1,29 @@
+@import '../../../shared/styles/_variables'
+@import '../../../shared/styles/fontUtils'
+
+.root
+    width: 670px
+    border-radius: 5px
+    background-color: #32353D
+    color: $primaryColor
+
+.active
+    border: 1px solid #E6AF27
+    .header
+        color: #E6AF27
+
+.wrapper
+    display: flex
+    flex-direction: column
+
+.header
+    margin-top: 20px
+    margin-bottom: 20px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-size: fontSizeRem(18px)
+    line-height: lineHeight(21,6px, 18px)
+
+.text
+    margin-bottom: 30px

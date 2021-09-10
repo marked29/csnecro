@@ -1,26 +1,19 @@
 import { FC } from 'react';
-import ReactTooltip from 'react-tooltip';
 
 import cn from 'classnames';
 
 import style from './skin.module.sass';
 
 type SkinProps = {
+  avatar?: string;
   className?: string;
   tooltip?: string;
 };
 
-const Skin: FC<SkinProps> = ({ className, tooltip }) => {
+const Skin: FC<SkinProps> = ({ className, avatar = '/img/avatarBig.png' }) => {
   return (
-    <>
-      <img
-        className={cn(className, style.skinImg)}
-        src="/img/avatarBig.png"
-        alt="avatar"
-        data-tip={tooltip || 'skin name'}
-      />
-      <ReactTooltip />
-    </>
+    <img className={cn(className, style.skinImg)} src={avatar} alt="avatar" />
   );
 };
+
 export default Skin;
