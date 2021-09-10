@@ -2,20 +2,12 @@ import { FC, useState } from 'react';
 
 import Wrapper from '../../../../shared/components/wrapper/wrapper.component';
 import Button from '../../../../shared/components/button/button.component';
-import { SkinEntity } from '../../../../app/domain/skin';
 import { Skin } from '../skins';
+import type { GamerEntity } from '../../../../app/domain/gamer';
 
 import style from './gamer.module.sass';
 
-type GamerProps = {
-  userName: string;
-  deposit: string;
-  percentage: string;
-  lvl: number;
-  skins: SkinEntity[];
-};
-
-export const Gamer: FC<GamerProps> = ({
+export const Gamer: FC<GamerEntity> = ({
   userName,
   deposit,
   percentage,

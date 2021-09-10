@@ -7,6 +7,7 @@ import style from './header.module.sass';
 type HeaderProps = {
   gameId?: string;
 };
+
 const headerTitlesLeft = ['SKIN LIMIT', 'MIN BET', 'MAX BET'];
 const headerTitlesRight = ['TIME', 'TOTAL', 'USERS'];
 
@@ -31,4 +32,5 @@ const Header: FC<HeaderProps> = ({ gameId = '# 3445' }) => {
     </Wrapper>
   );
 };
+
 export default Header;

@@ -3,17 +3,36 @@ import { Button } from '../../../../shared/components/button';
 
 import Wrapper from '../../../../shared/components/wrapper/wrapper.component';
 import Arrow from '../../../../shared/svg/arrow';
+import ArrowDown from '../../../../shared/svg/arrow-down';
 
 import style from './header.module.sass';
 
-const Header: FC = () => {
+export type HeaderProps = {
+  onToggleCard: VoidFunction;
+  isExpanded: boolean;
+};
+
+export const Header: FC<HeaderProps> = ({ onToggleCard, isExpanded }) => {
   return (
     <Wrapper paddingSize="md" className={style.header}>
       <div className={style.content}>
         <div className={style.gameNumber}>Game # 3445</div>
-        <div className={style.showMore}>
-          Close info <Arrow className={style.arrowStyle} />
-        </div>
+        <Button
+          color="transparent"
+          onClick={onToggleCard}
+          className={style.toggleInfoBtn}
+        >
+          {isExpanded && (
+            <>
+              Close info <Arrow className={style.arrowUp} />
+            </>
+          )}
+          {!isExpanded && (
+            <>
+              Show info <ArrowDown className={style.arrowDown} />
+            </>
+          )}
+        </Button>
         <div className={style.hash}>
           <p>
             Hash:
@@ -29,4 +48,5 @@ const Header: FC = () => {
     </Wrapper>
   );
 };
+
 export default Header;

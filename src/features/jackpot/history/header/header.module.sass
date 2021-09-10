@@ -17,7 +17,7 @@
     margin-bottom: 8px
     display: flex
     width: 100%
-    align-items: center;
+    align-items: center
     justify-content: space-between
 
 .gameNumber
@@ -33,13 +33,25 @@
     @include fontDimensions(14.4px, 12px)
     font-weight: 400
     color: $text-3
-    position: relative;
-    left: 7%;
-    
+    position: relative
+    left: 7%
+
 .counter
     color: $secondaryColor
     padding: 0 5px
 
-.arrowStyle
-    position: relative
-    top: 3px
+.toggleInfoBtn
+    color: $accent
+
+    &:hover
+        color: white
+
+.arrowUp, .arrowDown
+    margin-top: 0px
+    margin-left: 5px
+
+.arrowUp
+    margin-top: rem(3px)
+
+.arrowDown
+    margin-bottom: rem(3px)
