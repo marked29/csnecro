@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import ReactTooltip from 'react-tooltip';
 
 import cn from 'classnames';
 
@@ -34,7 +33,6 @@ const User: FC<UserProps> = ({
         )}
       </div>
       {winnerLabel && <div className={style.winner}>WINNER</div>}
-      <ReactTooltip />
     </div>
   );
 };
