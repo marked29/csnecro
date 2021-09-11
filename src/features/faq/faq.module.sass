@@ -13,8 +13,10 @@
     .header
         padding-top: 50px
         padding-left: 50px
+        @include fontDimensions(21.6px, 18px)
         font-size: fontSizeRem(18px)
         line-height: lineHeight(21,6px, 18px)
+        
 
     .wrapper
         margin-top: 30px
@@ -22,8 +24,8 @@
 
         .main
             margin-right: 50px
-            font-size: fontSizeRem(14px)
-            line-height: lineHeight(16.8px, 14px)
+            @include fontDimensions(16.8px, 14px)
+            color: $secondaryColor
 
         .rules
             display: flex
@@ -31,6 +33,7 @@
 
             .rule
                 margin-top: 10px
+
                 &:first-child
                     margin-top: 0
                 &:last-child

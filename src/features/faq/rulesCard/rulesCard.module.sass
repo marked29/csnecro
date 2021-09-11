@@ -22,8 +22,13 @@
     display: flex
     align-items: center
     justify-content: space-between
-    font-size: fontSizeRem(18px)
-    line-height: lineHeight(21,6px, 18px)
+    @include fontDimensions(17px, 14px)
+    color: $secondaryColor
+
 
 .text
     margin-bottom: 30px
+    color: $secondaryColor
+    @include fontDimensions(16.8px, 14px)
+
+    
