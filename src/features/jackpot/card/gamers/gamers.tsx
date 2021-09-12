@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-import Wrapper from '../../../../shared/components/wrapper/wrapper.component';
 import Gamer from './gamer/gamer';
 
 import style from './gamers.module.sass';
@@ -56,10 +55,6 @@ const Gamers: FC = () => {
     <Gamer className={cn()} key={gamer.userName} {...gamer} />
   ));
 
-  return (
-    <Wrapper className={style.root} paddingSize="md">
-      {gamersList}
-    </Wrapper>
-  );
+  return <div className={style.root}>{gamersList}</div>;
 };
 export default Gamers;
