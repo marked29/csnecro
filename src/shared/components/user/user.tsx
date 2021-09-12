@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import cn from 'classnames';
 
+import ReactTooltip from 'react-tooltip';
 import style from './user.module.sass';
 import { GamerEntity } from '../../../app/domain/gamer';
 
@@ -23,7 +24,12 @@ const User: FC<UserProps> = ({
   return (
     <div className={compoundClassName}>
       <div className={style.userInfo}>
-        <img className={style.avatar} src="/img/avatar.png" alt="avatar" />
+        <img
+          className={style.avatar}
+          src="/img/avatar.png"
+          alt="avatar"
+          data-tip={userName}
+        />
         <span className={style.levelLabel}>{lvl}</span>
         {!hiddenSpan && (
           <>
@@ -33,6 +39,7 @@ const User: FC<UserProps> = ({
         )}
       </div>
       {winnerLabel && <div className={style.winner}>WINNER</div>}
+      <ReactTooltip />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import ReactTooltip from 'react-tooltip';
 
 import Wrapper from '../../../../../shared/components/wrapper/wrapper.component';
 import Button from '../../../../../shared/components/button/button.component';
@@ -27,10 +28,10 @@ export const Gamer: FC<GamerEntity> = ({
         </div>
         <div className={style.avatar}>
           <p className={style.lvl}>{lvl}</p>
-          <img src="/img/avatarBig.png" alt="avatar" />
+          <img src="/img/avatarBig.png" alt="avatar" data-tip={userName} />
           <p className={style.deposit}>{deposit}</p>
+          <ReactTooltip />
         </div>
-
         <Button
           size="sm"
           onClick={() => setIsSkinsShown(!isSkinsShown)}
