@@ -22,7 +22,7 @@ const Skins: FC<SkinsProps> = () => {
       <div className={style.bet}>
         <div className={style.what}>
           <span>
-            betted <p>skins</p>
+            betted <p className={style.skinsTittle}>skins</p>
           </span>
         </div>
         <div className={style.skins}>

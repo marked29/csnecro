@@ -37,6 +37,7 @@ module.exports = {
     'prettier/prettier': 'error',
     "react/react-in-jsx-scope": "off",
     "no-use-before-define": "off",
+    "react/require-default-props": "off" ,
     "@typescript-eslint/no-use-before-define": ["error"],
     "import/extensions": [
       "error",

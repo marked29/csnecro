@@ -7,7 +7,6 @@ import style from './skin.module.sass';
 type SkinProps = {
   avatar?: string;
   className?: string;
-  tooltip?: string;
 };
 
 const Skin: FC<SkinProps> = ({ className, avatar = '/img/avatarBig.png' }) => {
