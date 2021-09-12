@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import cn from 'classnames';
 
 import Wrapper from '../../../../shared/components/wrapper/wrapper.component';
 import Gamer from './gamer/gamer';
@@ -41,14 +42,23 @@ const MOCK_GAMERS = [
     percentage: '3.21%',
     skins: createSkins(['255$', '29$', '220$', '210$', '90$']),
   },
+  {
+    userName: 'User',
+    lvl: 13,
+    deposit: '4.09$',
+    percentage: '3.21%',
+    skins: createSkins(['255$', '29$', '220$', '210$', '90$']),
+  },
 ];
 
 const Gamers: FC = () => {
+  const gamersList = MOCK_GAMERS.map((gamer) => (
+    <Gamer className={cn()} key={gamer.userName} {...gamer} />
+  ));
+
   return (
-    <Wrapper paddingSize="md" className={style.root}>
-      {MOCK_GAMERS.map((gamer) => (
-        <Gamer key={gamer.userName} {...gamer} />
-      ))}
+    <Wrapper className={style.root} paddingSize="md">
+      {gamersList}
     </Wrapper>
   );
 };

@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
+import cn from 'classnames';
 
 import Wrapper from '../../../../../shared/components/wrapper/wrapper.component';
 import Button from '../../../../../shared/components/button/button.component';
@@ -8,7 +9,12 @@ import type { GamerEntity } from '../../../../../app/domain/gamer';
 
 import style from './gamer.module.sass';
 
-export const Gamer: FC<GamerEntity> = ({
+type GamerProps = {
+  className?: string;
+} & GamerEntity;
+
+export const Gamer: FC<GamerProps> = ({
+  className,
   userName,
   deposit,
   percentage,
@@ -18,7 +24,7 @@ export const Gamer: FC<GamerEntity> = ({
   const [isSkinsShown, setIsSkinsShown] = useState(false);
 
   return (
-    <div className={style.root}>
+    <div className={cn(style.root, className)}>
       <Wrapper paddingSize="md" className={style.userCard}>
         <div className={style.name}>
           <h4>{userName}</h4>
