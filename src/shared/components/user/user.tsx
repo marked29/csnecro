@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import ReactTooltip from 'react-tooltip';
 
 import cn from 'classnames';
 
+import ReactTooltip from 'react-tooltip';
 import style from './user.module.sass';
 import { GamerEntity } from '../../../app/domain/gamer';
 
@@ -10,14 +10,12 @@ type UserProps = {
   className?: string;
   winnerLabel?: boolean;
   hiddenSpan?: boolean;
-  tooltip?: string;
 } & Partial<Pick<GamerEntity, 'userName' | 'lvl'>>;
 
 const User: FC<UserProps> = ({
   className,
   winnerLabel,
   hiddenSpan,
-  tooltip,
   userName = 'Username',
   lvl = 27,
 }) => {
@@ -30,7 +28,7 @@ const User: FC<UserProps> = ({
           className={style.avatar}
           src="/img/avatar.png"
           alt="avatar"
-          data-tip={tooltip || 'avatar'}
+          data-tip={userName}
         />
         <span className={style.levelLabel}>{lvl}</span>
         {!hiddenSpan && (

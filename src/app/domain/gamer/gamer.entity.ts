@@ -7,5 +7,4 @@ export type GamerEntity = {
   lvl: number;
   skins: SkinEntity[];
   winner?: boolean;
-  tooltip?: string;
 };
