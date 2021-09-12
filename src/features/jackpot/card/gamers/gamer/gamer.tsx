@@ -1,9 +1,9 @@
 import { FC, useState } from 'react';
 
-import Wrapper from '../../../../shared/components/wrapper/wrapper.component';
-import Button from '../../../../shared/components/button/button.component';
-import { Skin } from '../skins';
-import type { GamerEntity } from '../../../../app/domain/gamer';
+import Wrapper from '../../../../../shared/components/wrapper/wrapper.component';
+import Button from '../../../../../shared/components/button/button.component';
+import { Skin } from '../../skins';
+import type { GamerEntity } from '../../../../../app/domain/gamer';
 
 import style from './gamer.module.sass';
 
