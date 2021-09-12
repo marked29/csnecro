@@ -7,13 +7,12 @@ import style from './skin.module.sass';
 type SkinProps = {
   avatar?: string;
   className?: string;
-  skinName?: string;
 } & Partial<Pick<SkinEntity, 'name' | 'avatar'>>;
 
 const Skin: FC<SkinProps> = ({
   className,
   avatar = '/img/avatarBig.png',
-  skinName = 'skinName',
+  name = 'skinName',
 }) => {
   return (
     <>
@@ -21,7 +20,7 @@ const Skin: FC<SkinProps> = ({
         className={cn(className, style.skinImg)}
         src={avatar}
         alt="avatar"
-        data-tip={skinName}
+        data-tip={name}
       />
       <ReactTooltip />
     </>
