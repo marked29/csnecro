@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import Wrapper from '../../../../shared/components/wrapper/wrapper.component';
-import Gamer from './gamer';
+import Gamer from './gamer/gamer';
 
 import style from './gamers.module.sass';
 
