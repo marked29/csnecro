@@ -58,23 +58,8 @@ const MOCK_GAMERS = [
 ];
 
 const Gamers: FC = () => {
-  // const [skinsShown, setSkinsShown] = useState<{ [key: number]: boolean }>({});
-
-  // const toggleSkins = useCallback(
-  //   (id: number) => {
-  //     setSkinsShown({ ...skinsShown, [id]: !skinsShown[id] });
-  //   },
-  //   [skinsShown]
-  // );
-
   const gamersList = MOCK_GAMERS.map((gamer) => (
-    <Gamer
-      className={cn()}
-      key={gamer.id}
-      // toggleSkins={toggleSkins}
-      // isSkinsShown={skinsShown[gamer.id]}
-      {...gamer}
-    />
+    <Gamer className={cn()} key={gamer.id} {...gamer} />
   ));
 
   const responsive = {
