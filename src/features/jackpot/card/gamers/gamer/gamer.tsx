@@ -1,4 +1,5 @@
-import { FC, useState } from 'react';
+import { FC, useState, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import ReactTooltip from 'react-tooltip';
 import cn from 'classnames';
 
@@ -8,10 +9,36 @@ import { Skin } from '../../skins';
 import type { GamerEntity } from '../../../../../app/domain/gamer';
 
 import style from './gamer.module.sass';
+import { ClickOutsideListener } from '../../../../../shared/components/click-outside-listener/ClickOutsideListener';
 
 type GamerProps = {
   className?: string;
 } & GamerEntity;
+
+const SkinsSurface: FC<{
+  skins: GamerEntity['skins'];
+  parent: HTMLDivElement;
+}> = ({ skins, parent }) => {
+  const { height, left } = parent.getBoundingClientRect();
+
+  const carouselDims = document
+    .getElementsByClassName('alice-carousel')[0]
+    .getBoundingClientRect();
+
+  const position = {
+    top: height,
+    left: left - carouselDims.left,
+  };
+
+  return createPortal(
+    <div className={style.skins} style={position}>
+      {skins.map((skin) => (
+        <Skin {...skin} className={style.skin} />
+      ))}
+    </div>,
+    document.getElementsByClassName('alice-carousel')[0] as Element
+  );
+};
 
 export const Gamer: FC<GamerProps> = ({
   className,
@@ -22,9 +49,14 @@ export const Gamer: FC<GamerProps> = ({
   skins,
 }) => {
   const [isSkinsShown, setIsSkinsShown] = useState(false);
+  const gamerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <Wrapper paddingSize="md" className={cn(style.root, className)}>
+    <Wrapper
+      ref={gamerRef}
+      paddingSize="md"
+      className={cn(style.root, className)}
+    >
       <div className={style.name}>
         <h4>{userName}</h4>
         <span className={style.percent_title}>
@@ -44,12 +76,14 @@ export const Gamer: FC<GamerProps> = ({
       >
         {isSkinsShown ? 'Hide skins' : 'Show skins'}
       </Button>
-      {isSkinsShown && (
-        <div className={style.skins}>
-          {skins.map((skin) => (
-            <Skin {...skin} className={style.skin} />
-          ))}
-        </div>
+      {isSkinsShown && !!gamerRef.current && (
+        <ClickOutsideListener
+          onClickOutside={() => {
+            setIsSkinsShown(false);
+          }}
+        >
+          <SkinsSurface parent={gamerRef.current} skins={skins} />
+        </ClickOutsideListener>
       )}
     </Wrapper>
   );

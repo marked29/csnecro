@@ -13,7 +13,7 @@ import style from './layout.module.sass';
 
 const Layout: FC = () => {
   return (
-    <div className={style.root}>
+    <div id="shit" className={style.root}>
       <Chat />
       <div className={style.wrapper}>
         <Header />
