@@ -54,6 +54,22 @@ const MOCK_GAMERS = [
     percentage: '3.21%',
     skins: createSkins(['255$', '29$', '220$', '210$', '90$']),
   },
+  {
+    id: 6,
+    userName: 'User',
+    lvl: 13,
+    deposit: '4.09$',
+    percentage: '3.21%',
+    skins: createSkins(['255$', '29$', '220$', '210$', '90$']),
+  },
+  {
+    id: 7,
+    userName: 'User',
+    lvl: 13,
+    deposit: '4.09$',
+    percentage: '3.21%',
+    skins: createSkins(['255$', '29$', '220$', '210$', '90$']),
+  },
 ];
 
 const Gamers: FC = () => {
@@ -63,16 +79,20 @@ const Gamers: FC = () => {
 
   const responsive = {
     0: { items: 1 },
-    568: { items: 4 },
+    578: { items: 3 },
   };
 
   return (
     <div className={style.root}>
       <AliceCarousel
-        items={gamersList}
+        disableDotsControls
+        mouseTracking
+        touchTracking
+        autoWidth
         responsive={responsive}
-        disableButtonsControls
-      />
+      >
+        {gamersList}
+      </AliceCarousel>
     </div>
   );
 };

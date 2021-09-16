@@ -18,3 +18,38 @@ code {
     url('./shared/fonts/Lato/Lato-Regular.ttf') format('truetype');
     font-weight: normal;
 }
+
+.alice-carousel__prev-btn
+.alice-carousel__prev-btn-item, 
+.alice-carousel__next-btn 
+.alice-carousel__next-btn-item
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #E5AF27;
+  height: 116px;
+  bottom: 144px;
+  width: 11px;
+  font-size: 20px;
+  color: #22242B;
+}
+
+.alice-carousel__prev-btn
+.alice-carousel__prev-btn-item {
+  border-radius: 3px 0px 0px 2px;
+  right: 15px;
+
+}
+.alice-carousel__next-btn 
+.alice-carousel__next-btn-item {
+  border-radius: 0px 3px 2px 0px;
+  right: -635px;
+}
+
+.alice-carousel__next-btn-item.__inactive
+.alice-carousel__prev-btn-item.__inactive {
+  color: #a1a1a1;
+  background-color: #32353d;
+}
