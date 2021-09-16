@@ -12,6 +12,7 @@ const createSkins = (depostits: string[]) =>
 
 const MOCK_GAMERS = [
   {
+    id: 1,
     userName: 'User name',
     lvl: 13,
     deposit: '30.09$',
@@ -35,6 +36,7 @@ const MOCK_GAMERS = [
     winner: true,
   },
   {
+    id: 2,
     userName: 'Josh Snow',
     lvl: 99,
     deposit: '100.09$',
@@ -59,6 +61,7 @@ const MOCK_GAMERS = [
     ]),
   },
   {
+    id: 3,
     userName: 'Lorem Ipsum',
     lvl: 1,
     deposit: '1.01$',
@@ -85,6 +88,7 @@ const MOCK_GAMERS = [
     ]),
   },
   {
+    id: 4,
     userName: 'User',
     lvl: 13,
     deposit: '4.09$',
@@ -112,6 +116,7 @@ const MOCK_GAMERS = [
     ]),
   },
   {
+    id: 5,
     userName: 'User',
     lvl: 13,
     deposit: '4.09$',
@@ -139,6 +144,7 @@ const MOCK_GAMERS = [
     ]),
   },
   {
+    id: 6,
     userName: 'User',
     lvl: 16,
     deposit: '4.09$',
