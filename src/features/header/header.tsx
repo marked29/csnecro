@@ -13,7 +13,7 @@ import style from './header.module.sass';
 const Header: FC = () => {
   return (
     <header className={style.root}>
-      <Wrapper className={style.wrapper}>
+      <Wrapper paddingSize="md" className={style.wrapper}>
         <div>
           <NavLink to={Routes.JACKPOT}>Jackpot</NavLink>
           <NavLink to={Routes.COINFLIP}>Coinflip</NavLink>
