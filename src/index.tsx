@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { store } from './app/store';
 import './shared/fonts/Lato/Lato-Regular.ttf';
+import 'react-alice-carousel/lib/alice-carousel.css';
+
 import * as serviceWorker from './serviceWorker';
 
 import { App } from './App';

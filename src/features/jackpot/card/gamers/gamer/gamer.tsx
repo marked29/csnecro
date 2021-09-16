@@ -5,40 +5,17 @@ import cn from 'classnames';
 
 import Wrapper from '../../../../../shared/components/wrapper/wrapper.component';
 import Button from '../../../../../shared/components/button/button.component';
-import { Skin } from '../../skins';
+import { ClickOutsideListener } from '../../../../../shared/hooks/click-outside-listener/ClickOutsideListener';
+import { useRelativePositionStyle } from './useRelativePositionStyle';
+import SkinsSurface from './skinsurface/skinsurface';
+
 import type { GamerEntity } from '../../../../../app/domain/gamer';
 
 import style from './gamer.module.sass';
-import { ClickOutsideListener } from '../../../../../shared/components/click-outside-listener/ClickOutsideListener';
 
 type GamerProps = {
   className?: string;
 } & GamerEntity;
-
-const SkinsSurface: FC<{
-  skins: GamerEntity['skins'];
-  parent: HTMLDivElement;
-}> = ({ skins, parent }) => {
-  const { height, left } = parent.getBoundingClientRect();
-
-  const carouselDims = document
-    .getElementsByClassName('alice-carousel')[0]
-    .getBoundingClientRect();
-
-  const position = {
-    top: height,
-    left: left - carouselDims.left,
-  };
-
-  return createPortal(
-    <div className={style.skins} style={position}>
-      {skins.map((skin) => (
-        <Skin {...skin} className={style.skin} />
-      ))}
-    </div>,
-    document.getElementsByClassName('alice-carousel')[0] as Element
-  );
-};
 
 export const Gamer: FC<GamerProps> = ({
   className,
@@ -50,6 +27,8 @@ export const Gamer: FC<GamerProps> = ({
 }) => {
   const [isSkinsShown, setIsSkinsShown] = useState(false);
   const gamerRef = useRef<HTMLDivElement>(null);
+  const stylePosition = useRelativePositionStyle(gamerRef);
+  const shouldShowSkins = isSkinsShown && !!gamerRef.current;
 
   return (
     <Wrapper
@@ -76,15 +55,17 @@ export const Gamer: FC<GamerProps> = ({
       >
         {isSkinsShown ? 'Hide skins' : 'Show skins'}
       </Button>
-      {isSkinsShown && !!gamerRef.current && (
-        <ClickOutsideListener
-          onClickOutside={() => {
-            setIsSkinsShown(false);
-          }}
-        >
-          <SkinsSurface parent={gamerRef.current} skins={skins} />
-        </ClickOutsideListener>
-      )}
+      {shouldShowSkins &&
+        createPortal(
+          <ClickOutsideListener
+            onClickOutside={() => {
+              setIsSkinsShown(false);
+            }}
+          >
+            <SkinsSurface skins={skins} style={stylePosition} />
+          </ClickOutsideListener>,
+          document.getElementsByClassName('alice-carousel')[0] as Element
+        )}
     </Wrapper>
   );
 };

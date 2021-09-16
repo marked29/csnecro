@@ -5,7 +5,6 @@ import AliceCarousel from 'react-alice-carousel';
 import Gamer from './gamer/gamer';
 
 import style from './gamers.module.sass';
-import 'react-alice-carousel/lib/alice-carousel.css';
 
 const createSkins = (deposits: string[]) =>
   deposits.map((deposit, index) => ({
